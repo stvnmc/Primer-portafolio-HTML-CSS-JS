@@ -54,28 +54,19 @@ menuIteam.forEach((item, index) => {
 
 
 
-
-const toggles = document.querySelectorAll(".frontal1, .frontal2 ,.frontal3");
-const contenedor = document.querySelectorAll(".contenedor-js1, .contenedor-js2, .contenedor-js3");
-
-
-toggles[0].addEventListener('click', () => {
-    parteInferior.classList.remove('open')
-    contenedor[0].classList.toggle('open')
-    contenedor[1].classList.remove('open')
-    contenedor[2].classList.remove('open')
-})
-toggles[1].addEventListener('click', () => {
-    parteInferior.classList.remove('open')
-    contenedor[0].classList.remove('open')
-    contenedor[1].classList.toggle('open')
-    contenedor[2].classList.remove('open')
-})
-toggles[2].addEventListener('click', () => {
-    parteInferior.classList.remove('open')
-    contenedor[0].classList.remove('open')
-    contenedor[1].classList.remove('open')
-    contenedor[2].classList.toggle('open')
-})
+const contenedor = document.querySelectorAll(".contenedor");
+const logosF = document.querySelectorAll('.frontal')
 
 
+
+logosF.forEach((item, index) => {
+    item.addEventListener("click", (e) => {
+        parteInferior.classList.remove('open')
+        contenedor[2].style.transform = `translateY(${-81 * index}vh)`
+        contenedor[0].style.transform = `translateY(${-82 * index}vh)`
+        contenedor[1].style.transform = `translateY(${-82 * index}vh)`
+
+        document.querySelector('.locosJBR .activo').classList.remove('activo')
+        item.classList.toggle('activo')
+    });
+});
