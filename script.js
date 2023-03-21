@@ -20,14 +20,14 @@ iconosDeMenu.forEach((item, index) => {
 
         document.querySelector('.iconosDeMenu .activo').classList.remove('activo')
         item.classList.toggle('activo')
-    });
-});
+    })
+})
 
 
 
 // Informacion
 
-const contenedor = document.querySelectorAll(".contenedor");
+const contenedor = document.querySelectorAll(".contenedor")
 const logosF = document.querySelectorAll('.frontal')
 
 logosF.forEach((item, index) => {
@@ -44,8 +44,8 @@ logosF.forEach((item, index) => {
 
         document.querySelector('.locosJBR .activo').classList.remove('activo')
         item.classList.toggle('activo')
-    });
-});
+    })
+})
 
 
 // Proyectos
@@ -65,5 +65,5 @@ numerosDePaginas.forEach((item, index) => {
 
         document.querySelector('.numerosDePaginas .activo').classList.remove('activo')
         item.classList.toggle('activo')
-    });
-});
+    })
+})
