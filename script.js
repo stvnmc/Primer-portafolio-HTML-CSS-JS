@@ -1,6 +1,43 @@
 const inferior = document.querySelector('.parteInferior')
 
+
+//Principal
+const principal = document.querySelectorAll('.lista')
+
+principal.forEach((item, index) => {
+    item.addEventListener("click", () => {
+
+
+        if (index === 0) {
+            inferior.classList.remove('arriba')
+            inferior.classList.remove('info')
+            inferior.classList.add('proyecto')
+            item.classList.remove('.activo')
+
+        } else if (index === 1) {
+            inferior.classList.remove('proyecto')
+            inferior.classList.add('arriba')
+            inferior.classList.remove('info')
+        } else {
+            inferior.classList.remove('proyecto')
+            inferior.classList.remove('arriba')
+            inferior.classList.add('info')
+        }
+        document.querySelector('.listas .activo').classList.remove('activo')
+        item.classList.toggle('activo')
+
+    })
+})
+
+
+
+
+
+
+
 //Redes sociales
+
+
 
 const Deslizantes = document.querySelectorAll(".carpetaDeslizantes")
 const iconosDeMenu = document.querySelectorAll(".menuIteam")
@@ -20,8 +57,11 @@ iconosDeMenu.forEach((item, index) => {
 
         document.querySelector('.iconosDeMenu .activo').classList.remove('activo')
         item.classList.toggle('activo')
+        
+
     })
 })
+
 
 
 
