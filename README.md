@@ -4,6 +4,5 @@ Se que la presentacion de este proyecto no es muy accesible ni gustoso a la vist
 El metodo que use para que sea responsive use en medidas el % ya que me da mucho mas facilidad al medir todos los elementos integrados al proyecto, se que no es muy recomendablepero es exclusiva mente para este proyecto. 
 
 
-[SharedScreenshot](https://user-images.githubusercontent.com/80985958/234973800-f6764cba-da57-4485-823a-41b0484c3ea5.jpg)
 
-![SharedScreenshot](https://user-images.githubusercontent.com/80985958/234974083-4963e482-c32c-4d73-86aa-54aa7277014d.jpg)
+![SharedScreenshot](https://user-images.githubusercontent.com/80985958/234974141-2942ab89-17bf-4356-b9a4-6f0499f2572b.jpg)
