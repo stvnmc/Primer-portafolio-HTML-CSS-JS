@@ -46,26 +46,41 @@ img {
     width: 100%;
 }
 
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+
 /* ///////////////primeraParte/////////// */
 
 .parteSuperior {
     height: 11%;
     display: flex;
     justify-content: space-around;
-    background-color: var(--proyectos);
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
 
-}
-
-.perfil img {
-    width: auto;
-    height: 90%;
 }
 
 .perfil {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 34%;
+    width: 24%;
+    font-size: 1rem;
+}
+
+.perfil img {
+    width: auto;
+    height: 90%;
+    margin-right: 25px;
+    border-radius: 20%;
 }
 
 .listas {
@@ -79,12 +94,12 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 33%;
-    height: 85%;
+    width: 31%;
+    height: 84%;
     color: #fff;
     font-size: larger;
     background-color: #d8b4a7;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     border: 1px solid var(--borde);
     font-size: 30px;
@@ -107,14 +122,6 @@ img {
     background-size: cover;
     height: 89%;
     width: 100%;
-}
-
-video {
-    position: absolute;
-    width: 100%;
-    height: 89%;
-    object-fit: cover;
-    z-index: 0;
 }
 
 /*////////////////////       sessionArriba     ///////////////////
