@@ -169,19 +169,27 @@ video {
     background-color: #934174;
 }
 
+.cajonDeIconos {
+    background-color: #fff;
+    transition: 0.5s;
+    width: 100%;
+    height: 77%;
+    z-index: 1;
+    overflow: hidden;
+    width: 93%;
+    height: 83%;
+    padding: 0% 1%;
+    margin: 1% auto;
+    border-radius: 10px;
+    box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
+}
+
+
 .informacionDeIconos {
     display: flex;
     flex-direction: column;
-    width: 93%;
-    height: 83%;
-    transition: 0.5s;
-    background-color: var(--proyectos);
-    margin: 1% auto;
-    padding: 0% 1%;
-    overflow: hidden;
     z-index: 5;
-    border-radius: 10px;
-    box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
+
 }
 
 .carpetaDeslizantes {
@@ -367,17 +375,21 @@ video {
 
 /*////////////////////               informacion                ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
-
-.informacion {
-    border-radius: 10px;
+.cajonDeInformacion {
     height: 100%;
+    width: 60%;
+    border-radius: 10px;
     background-color: #ddddddb1;
     padding: 30px 65px 0;
-    box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
-    -webkit-box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
-    -moz-box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
     z-index: 2;
     overflow: hidden;
+    box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
+}
+
+
+
+.informacion {
+
     transition: 1s;
 }
 
@@ -419,7 +431,7 @@ video {
 
 /* modificar la clase */
 
-.parteInferior.proyecto .informacion {
+.parteInferior.proyecto .cajonDeInformacion {
     width: 7%;
     height: 12%;
     border-radius: 30px;
@@ -431,7 +443,7 @@ video {
     display: none;
 }
 
-.parteInferior.arriba .informacion {
+.parteInferior.arriba .cajonDeInformacion {
     width: 10%;
     height: 60%;
     border-radius: 30px;
@@ -449,12 +461,9 @@ video {
 
 .cajasDeProyectos {
     position: relative;
-    display: flex;
-    flex-direction: column;
     background-color: var(--proyectos);
-    padding: 3% 1%;
+    padding: 1%;
     overflow: hidden;
-    align-items: center;
     transition: 1s;
     border-radius: 10px;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
@@ -476,6 +485,12 @@ video {
     z-index: 10;
 }
 
+.numerosDePaginas button {
+    min-width: 6vw;
+    min-height: 4vh;
+}
+
+/* 
 .numeros {
     display: flex;
     align-items: center;
@@ -489,25 +504,23 @@ video {
 
 .numeros.activo {
     background-color: var(--activo);
-}
+} */
 
 .proyectos {
     transform: translate(0%, 0%);
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 30vh 30vh;
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-rows: 35vh;
     align-items: center;
-    height: 100%;
     border-radius: 10px;
     transition: 1s;
-    margin-bottom: 90px;
 }
 
 .contenedores {
     position: relative;
     padding: 5px;
     background-color: #a773ba;
-    height: 90%;
+    height: 31vh;
     width: 97%;
     border-radius: 10px;
     transition: 1s;
@@ -518,7 +531,7 @@ video {
 .contenedores img {
     border-radius: 10px;
     width: 100%;
-    height: 100%;
+
     transition: opacity 1s, transform 1s;
 }
 
@@ -549,11 +562,12 @@ video {
     transition-delay: 0.10s;
     padding: 0.5em 0.5em;
     transform: translateX(-120%);
+    border-radius: 5px;
 }
 
 .contenedores i {
     transition-delay: 0.20s;
-    margin-left: 45%;
+    margin-left: 40%;
     opacity: 0;
     margin-bottom: 10px;
 }
