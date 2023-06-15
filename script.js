@@ -50,7 +50,7 @@ logosF.forEach((item, index) => {
 //     })
 // })
 
-const infoProyectContactos = [
+const infoDeContactos = [
     {
         i: 'fa-brands fa-linkedin',
         h2: 'Linkedin',
@@ -73,6 +73,7 @@ const infoProyectContactos = [
         img: 'img/One piece, Yamato.jpg'
     }
 ]
+
 
 const infoProyectos = [
     {
@@ -209,44 +210,57 @@ const hola = () => {
 
 
     // Informacion  
-    infoProyectContactos.forEach(info => {
+    const infoDeIconos = infoDeContactos.length
+    for (let i = 0; i < infoDeIconos; i++) {
         buttonContactoHTML =
             `
-            <div class="menuIteam">
-                <i class="${info.i}"></i>
-            </div>
-            `
+        <div class="menuIteam" id='${infoDeContactos[i].h2}'>
+        <i class="${infoDeContactos[i].i}"></i>
+        </div>
+        `
         document.getElementById('iconosDeMenu').innerHTML += buttonContactoHTML;
 
         infoContactoHTML =
             `
             <div class="carpetaDeslizantes">
                         <div class="descricion">
-                            <h2>${info.h2}</h2>
-                            <p>${info.p}</p>
+                            <h2>${infoDeContactos[i].h2}</h2>
+                            <p>${infoDeContactos[i].p}</p>
                         </div>
                         <div class="foto">
-                            <img src="${info.img}">
+                            <img src="${infoDeContactos[i].img}">
                         </div>
                     </div>
             `
         document.getElementById('informacionDeIconos').innerHTML += infoContactoHTML;
-    })
 
-    const iconosDelMenuDeContacto = document.querySelectorAll('.menuIteam')
+        setTimeout(() => {
+            var iconosDeContacto = document.getElementById(`${infoDeContactos[i].h2}`)
+
+            iconosDeContacto.addEventListener("click", () => {
+                abrirInformacion(iconosDeMenu, i)
+            })
+        }, 100);
 
 
-    iconosDelMenuDeContacto.forEach((item, index) => {
-        item.addEventListener("click", () => {
-            abrirInformacion(iconosDeMenu, index)
-            // document.querySelector('.iconosDeMenu .activo').classList.remove('activo')
-            // item.classList.toggle('activo')
-    
-            // document.querySelector('.listas .I').classList.add('activo')
-            // document.querySelector('.listas .L').classList.remove('activo')
-            // document.querySelector('.listas .P').classList.remove('activo')
-        })
-    })
+    }
+
+
+
+
+    // const menuIteaaam = document.querySelectorAll('.menuIteam')
+    // menuIteaaam.forEach((item, index) => {
+    //     item.addEventListener("click", () => {
+    //         abrirInformacion(iconosDeMenu, index)
+
+    //         // document.querySelector('.iconosDeMenu .activo').classList.remove('activo')
+    //         // item.classList.toggle('activo')
+
+    //         // document.querySelector('.listas .I').classList.add('activo')
+    //         // document.querySelector('.listas .L').classList.remove('activo')
+    //         // document.querySelector('.listas .P').classList.remove('activo')
+    //     })
+    // })
 
 
 
