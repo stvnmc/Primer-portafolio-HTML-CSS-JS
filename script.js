@@ -10,6 +10,7 @@ const logosF = document.querySelectorAll('.frontal')
 // Proyectos
 const Proyectoddds = document.querySelectorAll('.numerosDePaginas')
 
+
 //Principal
 principal.forEach((item, index) => {
     item.addEventListener("click", () => {
@@ -24,172 +25,249 @@ principal.forEach((item, index) => {
         item.classList.toggle('activo')
     })
 })
-//Redes sociales
-
-// lenguages y franworks
-logosF.forEach((item, index) => {
-    item.addEventListener("click", () => {
-        abrirInformacion(logosF, index)
-        document.querySelector('.locosJBR .activo').classList.remove('activo')
-        item.classList.toggle('activo')
-
-        document.querySelector('.listas .I').classList.remove('activo')
-        document.querySelector('.listas .L').classList.add('activo')
-        document.querySelector('.listas .P').classList.remove('activo')
-    })
-})
-// Proyectos
-// numerosDePaginas.forEach((item, index) => {
-//     item.addEventListener("click", () => {
-//         document.querySelector('.numerosDePaginas .activo').classList.remove('activo');
-//         item.classList.toggle('activo')
-
-//         document.querySelector('.listas .I').classList.remove('activo')
-//         document.querySelector('.listas .L').classList.remove('activo')
-//         document.querySelector('.listas .P').classList.add('activo')
-//     })
-// })
-
-const infoDeContactos = [
-    {
-        i: 'fa-brands fa-linkedin',
-        h2: 'Linkedin',
-        p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
-        img: 'img/One piece, Yamato.jpg'
-    }, {
-        i: 'fa-brands fa-discord',
-        h2: 'Instagram & Discord',
-        p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
-        img: 'img/One piece, Yamato.jpg'
-    }, {
-        i: 'fa-brands fa-discord',
-        h2: 'Git',
-        p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
-        img: 'img/One piece, Yamato.jpg'
-    }, {
-        i: 'fa-solid fa-crop-simple',
-        h2: 'Fraworts',
-        p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
-        img: 'img/One piece, Yamato.jpg'
-    }
-]
 
 
-const infoProyectos = [
-    {
-        nombre: 'PokeApi',
-        img: 'img/PokeApi.jpg',
-        href: 'https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2',
-        AboutP: 'Una PokeApi mas completa con sus con la informacion del pokemon y su generaciones'
-    },
-    {
-        nombre: '2dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '3dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '4dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '6dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '7dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '8dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '8dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '8dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '8dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    }
-]
-const proyectos = document.querySelectorAll(".proyectos")
-
-const hola = () => {
-    //Proyecto    
-    const infoProyect = infoProyectos.length / 6
-    for (let i = 0; i < infoProyect; i++) {
-        buttonHTML =
-            `
-            <button class="indicador">${i + 1}</button>
-            `
-        document.getElementById('indicadores').innerHTML += buttonHTML;
-
-        if (i === 0) {
-            document.querySelector('.indicador').classList.add('activo')
+const datos = {
+    "infoDeContactos": [
+        {
+            i: 'fa-brands fa-linkedin',
+            h2: 'Linkedin',
+            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            img: 'img/One piece, Yamato.jpg'
+        }, {
+            i: 'fa-brands fa-discord',
+            h2: 'Instagram & Discord',
+            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            img: 'img/One piece, Yamato.jpg'
+        }, {
+            i: 'fa-brands fa-discord',
+            h2: 'Git',
+            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            img: 'img/One piece, Yamato.jpg'
+        }, {
+            i: 'fa-solid fa-crop-simple',
+            h2: 'Fraworts',
+            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            img: 'img/One piece, Yamato.jpg'
         }
+    ],
+    "infoDeLoAprendido": [
+        {
+            i: 'fa-brands fa-square-js',
+            h: 'HTML & CSS',
+            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            img: 'img/One piece, Yamato.jpg'
+        }, {
+            i: 'fa-brands fa-bootstrap',
+            h: 'JavaScript',
+            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            img: 'img/One piece,Kiado.jpg'
+        }, {
+            i: 'fa-brands fa-react',
+            h: 'React',
+            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            img: 'img/One piece, Falco.jpg'
+        }
+    ],
+    'infoProyectos': [
+        {
+            nombre: 'PokeApi',
+            img: 'img/PokeApi.jpg',
+            href: 'https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2',
+            AboutP: 'Una PokeApi mas completa con sus con la informacion del pokemon y su generaciones'
+        },
+        {
+            nombre: '2dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: 'comoesas',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '4dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '5dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '6dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '7dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '8dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '8dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '8dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '8dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '5dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '5dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '5dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '5dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '5dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        },
+        {
+            nombre: '5dsd',
+            img: 'img/blurry loading.png',
+            AboutP: 'XBOX and PLAYS'
+        }
+    ]
+}
+
+
+//////////////   Conctacto //////////////
+
+for (let i = 0; i < datos.infoDeContactos.length; i++) {
+    buttonContactoHTML =
+        `
+        <div class="menuIteam" id='${datos.infoDeContactos[i].h2}'>
+        <i class="${datos.infoDeContactos[i].i}"></i>
+        </div>
+        `
+    document.getElementById('iconosDeMenu').innerHTML += buttonContactoHTML;
+
+    if (i === 0) {
+        document.getElementById(`${datos.infoDeContactos[i].h2}`).classList.add('activo')
     };
-    const holaaa = document.querySelectorAll('.indicador')
-    holaaa.forEach((como, index) => {
-        como.addEventListener('click', (e) => {
-            abrirInformacion(Proyectoddds)
-            document.getElementById('proyects').style.transform = `translateY(${index * -71}vh)`
+
+    setTimeout(() => {
+        let iconosDeContacto = document.getElementById(`${datos.infoDeContactos[i].h2}`)
+
+        iconosDeContacto.addEventListener("click", () => {
+            abrirInformacion(iconosDeMenu, i)
+            document.querySelector('.iconosDeMenu .activo').classList.remove('activo')
+            iconosDeContacto.classList.toggle('activo')
+        })
+    }, 100);
+
+    infoContactoHTML =
+        `
+            <div class="carpetaDeslizantes">
+                        <div class="descricion">
+                            <h2>${datos.infoDeContactos[i].h2}</h2>
+                            <p>${datos.infoDeContactos[i].p}</p>
+                        </div>
+                        <div class="foto">
+                            <img src="${datos.infoDeContactos[i].img}">
+                        </div>
+                    </div>
+            `
+    document.getElementById('informacionDeIconos').innerHTML += infoContactoHTML;
+};
+
+
+
+//////////////   Lo Aprendido //////////////
+
+for (let i = 0; i < datos.infoDeLoAprendido.length; i++) {
+    buttonLoAprendidoHTML =
+        `
+        <button class="frontal" id='${datos.infoDeLoAprendido[i].h}'>
+        <i class="${datos.infoDeLoAprendido[i].i}"></i>
+        </button>
+        `
+    document.getElementById('logosParteFrontal').innerHTML += buttonLoAprendidoHTML;
+
+    if (i === 0) {
+        document.getElementById(`${datos.infoDeLoAprendido[i].h}`).classList.add('activo')
+    };
+
+    setTimeout(() => {
+        let button = document.getElementById(`${datos.infoDeLoAprendido[i].h}`)
+
+        button.addEventListener("click", () => {
+            abrirInformacion(logosF, i)
+            document.querySelector('.locosJBR .activo').classList.remove('activo')
+            button.classList.toggle('activo')
+        })
+    }, 100);
+
+    infoLoAprendidoHTML =
+        `
+        <div class="contenedor">
+            <h2>${datos.infoDeLoAprendido[i].h}</h2>
+            <p>${datos.infoDeLoAprendido[i].p}</p>
+            <div class="cont2">
+                <img src="${datos.infoDeLoAprendido[i].img}">
+            </div>
+        </div>
+    `
+    document.getElementById('informacion').innerHTML += infoLoAprendidoHTML;
+}
+
+
+//////////////  Proyecto  //////////////  
+
+for (let i = 0; i < datos.infoProyectos.length / 6; i++) {
+    buttonHTML =
+        `
+        <button class="indicador" id='${datos.infoProyectos[i].nombre}'>${i + 1}</button>
+        `
+    document.getElementById('indicadores').innerHTML += buttonHTML;
+
+    if (i === 0) {
+        document.querySelector('.indicador').classList.add('activo')
+    }
+
+    setTimeout(() => {
+        let cajaDeProyectos = document.getElementById(`${datos.infoProyectos[i].nombre}`)
+        cajaDeProyectos.addEventListener("click", () => {
+            abrirInformacion(Proyectoddds, i)
             document.querySelector('.numerosDePaginas .activo').classList.remove('activo')
-            e.target.classList.add('activo');
-        });
-    });
-    infoProyectos.forEach(hola => {
-        generationsHTML = `
+            cajaDeProyectos.classList.add('activo');
+        })
+    }, 1000)
+
+};
+
+datos.infoProyectos.forEach(hola => {
+    console.log('fuera')
+    generationsHTML = `
         <figure class="contenedores">
         <img src="${hola.img}">
         <div class="proyectos-informacion">
@@ -205,68 +283,9 @@ const hola = () => {
         </div>
     </figure>
         `
-        proyects.innerHTML += generationsHTML;
-    });
+    proyects.innerHTML += generationsHTML;
+});
 
-
-    // Informacion  
-    const infoDeIconos = infoDeContactos.length
-    for (let i = 0; i < infoDeIconos; i++) {
-        buttonContactoHTML =
-            `
-        <div class="menuIteam" id='${infoDeContactos[i].h2}'>
-        <i class="${infoDeContactos[i].i}"></i>
-        </div>
-        `
-        document.getElementById('iconosDeMenu').innerHTML += buttonContactoHTML;
-
-        infoContactoHTML =
-            `
-            <div class="carpetaDeslizantes">
-                        <div class="descricion">
-                            <h2>${infoDeContactos[i].h2}</h2>
-                            <p>${infoDeContactos[i].p}</p>
-                        </div>
-                        <div class="foto">
-                            <img src="${infoDeContactos[i].img}">
-                        </div>
-                    </div>
-            `
-        document.getElementById('informacionDeIconos').innerHTML += infoContactoHTML;
-
-        setTimeout(() => {
-            var iconosDeContacto = document.getElementById(`${infoDeContactos[i].h2}`)
-
-            iconosDeContacto.addEventListener("click", () => {
-                abrirInformacion(iconosDeMenu, i)
-            })
-        }, 100);
-
-
-    }
-
-
-
-
-    // const menuIteaaam = document.querySelectorAll('.menuIteam')
-    // menuIteaaam.forEach((item, index) => {
-    //     item.addEventListener("click", () => {
-    //         abrirInformacion(iconosDeMenu, index)
-
-    //         // document.querySelector('.iconosDeMenu .activo').classList.remove('activo')
-    //         // item.classList.toggle('activo')
-
-    //         // document.querySelector('.listas .I').classList.add('activo')
-    //         // document.querySelector('.listas .L').classList.remove('activo')
-    //         // document.querySelector('.listas .P').classList.remove('activo')
-    //     })
-    // })
-
-
-
-}
-
-hola()
 
 
 
@@ -288,6 +307,7 @@ function abrirInformacion(openSeccion, index) {
     }
 
     else if (openSeccion === Proyectoddds) {
+        document.getElementById('proyects').style.transform = `translateY(${index * -71}vh)`
         inferior.classList.remove('arriba')
         inferior.classList.remove('info')
         inferior.classList.add('proyecto')
