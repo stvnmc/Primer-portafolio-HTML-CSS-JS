@@ -1,5 +1,6 @@
-const inferior = document.querySelector('.parteInferior')
+const inferior = document.querySelector('body')
 //Redes sociales
+
 const Deslizantes = document.querySelectorAll(".carpetaDeslizantes")
 // const iconosDeMenu = document.querySelectorAll(".menuIteam")
 //Principal
@@ -9,22 +10,6 @@ const contenedor = document.querySelectorAll(".contenedor")
 const logosF = document.querySelectorAll('.frontal')
 // Proyectos
 const Proyectoddds = document.querySelectorAll('.numerosDePaginas')
-
-
-//Principal
-principal.forEach((item, index) => {
-    item.addEventListener("click", () => {
-        if (index === 0) {
-            abrirInformacion(iconosDeMenu)
-        } else if (index === 1) {
-            abrirInformacion(logosF)
-        } else {
-            abrirInformacion(Proyectoddds)
-        }
-        document.querySelector('.listas .activo').classList.remove('activo')
-        item.classList.toggle('activo')
-    })
-})
 
 
 const datos = {
@@ -69,136 +54,181 @@ const datos = {
             img: 'img/One piece, Falco.jpg'
         }
     ],
-    'infoProyectos': [
-        {
-            nombre: 'PokeApi',
-            img: 'img/PokeApi.jpg',
-            href: 'https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2',
-            AboutP: 'Una PokeApi mas completa con sus con la informacion del pokemon y su generaciones'
-        },
-        {
-            nombre: '2dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: 'comoesas',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '4dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '5dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '6dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '7dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '8dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '8dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '8dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '8dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '5dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '5dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '5dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '5dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '5dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        },
-        {
-            nombre: '5dsd',
-            img: 'img/blurry loading.png',
-            AboutP: 'XBOX and PLAYS'
-        }
+    'infoProyectos': [{
+        nombre: 'PokeApi',
+        img: 'img/PokeApi.jpg',
+        href: 'https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2',
+        AboutP: 'Una PokeApi mas completa con sus con la informacion del pokemon y su generaciones'
+    },
+    {
+        nombre: '2dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: ' 3 omoesas',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '4 dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '5 dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '6 dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: ' 7 PokeApi',
+        img: 'img/PokeApi.jpg',
+        href: 'https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2',
+        AboutP: 'Una PokeApi mas completa con sus con la informacion del pokemon y su generaciones'
+    },
+    {
+        nombre: ' 8 2dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: ' 9 comoesas',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '10 4dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '11 5dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '12 6dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '13 7dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '14 8dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '15 8dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '16 8dsd',
+        img: 'img/b lurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '17 8dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '18 5dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '19 5dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '20 5dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '21 5dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '22 5dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    },
+    {
+        nombre: '23 5dsd',
+        img: 'img/blurry loading.png',
+        AboutP: 'XBOX and PLAYS'
+    }
+    ],
+    'infoProyectosIcons': [
+        { N: '<i class="fa-solid fa-1"></i>' },
+        { N: '<i class="fa-solid fa-2"></i>' },
+        { N: '<i class="fa-solid fa-3"></i>' },
+        { N: '<i class="fa-solid fa-4"></i>' },
+        { N: '<i class="fa-solid fa-5"></i>' },
+        { N: '<i class="fa-solid fa-6"></i>' }
     ]
 }
-
 
 //////////////   Conctacto //////////////
 
 for (let i = 0; i < datos.infoDeContactos.length; i++) {
     buttonContactoHTML =
         `
-        <div class="menuIteam" id='${datos.infoDeContactos[i].h2}'>
+        <button class="menuIteam" id='${datos.infoDeContactos[i].h2}'>
         <i class="${datos.infoDeContactos[i].i}"></i>
-        </div>
+        </button>
         `
     document.getElementById('iconosDeMenu').innerHTML += buttonContactoHTML;
 
-    if (i === 0) {
-        document.getElementById(`${datos.infoDeContactos[i].h2}`).classList.add('activo')
-    };
+    if (i === 0) document.getElementById(`${datos.infoDeContactos[i].h2}`).classList.add('activo');
 
     setTimeout(() => {
         let iconosDeContacto = document.getElementById(`${datos.infoDeContactos[i].h2}`)
 
         iconosDeContacto.addEventListener("click", () => {
-            abrirInformacion(iconosDeMenu, i)
+            inferior.classList.add('arriba')
+            inferior.classList.remove('info')
+            inferior.classList.remove('proyecto')
+            mostarInformcaionContacto(i)
             document.querySelector('.iconosDeMenu .activo').classList.remove('activo')
             iconosDeContacto.classList.toggle('activo')
         })
     }, 100);
+};
 
+const mostarInformcaionContacto = (value) => {
+    document.getElementById('informacionDeIconos').innerHTML = '';
     infoContactoHTML =
         `
             <div class="carpetaDeslizantes">
                         <div class="descricion">
-                            <h2>${datos.infoDeContactos[i].h2}</h2>
-                            <p>${datos.infoDeContactos[i].p}</p>
+                            <h2>${datos.infoDeContactos[value].h2}</h2>
+                            <p>${datos.infoDeContactos[value].p}</p>
                         </div>
                         <div class="foto">
-                            <img src="${datos.infoDeContactos[i].img}">
+                            <img src="${datos.infoDeContactos[value].img}">
                         </div>
                     </div>
             `
     document.getElementById('informacionDeIconos').innerHTML += infoContactoHTML;
-};
+}
+mostarInformcaionContacto(0)
+
+
+
 
 
 
@@ -213,32 +243,39 @@ for (let i = 0; i < datos.infoDeLoAprendido.length; i++) {
         `
     document.getElementById('logosParteFrontal').innerHTML += buttonLoAprendidoHTML;
 
-    if (i === 0) {
-        document.getElementById(`${datos.infoDeLoAprendido[i].h}`).classList.add('activo')
-    };
+    if (i === 0) document.getElementById(`${datos.infoDeLoAprendido[i].h}`).classList.add('activo');
+
 
     setTimeout(() => {
         let button = document.getElementById(`${datos.infoDeLoAprendido[i].h}`)
 
         button.addEventListener("click", () => {
-            abrirInformacion(logosF, i)
+            inferior.classList.remove('arriba')
+            inferior.classList.add('info')
+            inferior.classList.remove('proyecto')
+            mostarInformcaionLoAprendido(i)
             document.querySelector('.locosJBR .activo').classList.remove('activo')
             button.classList.toggle('activo')
         })
     }, 100);
+}
 
+const mostarInformcaionLoAprendido = (value) => {
+    if (value == 0) value = 0;
+    document.getElementById('informacion').innerHTML = '';
     infoLoAprendidoHTML =
         `
-        <div class="contenedor">
-            <h2>${datos.infoDeLoAprendido[i].h}</h2>
-            <p>${datos.infoDeLoAprendido[i].p}</p>
+            <h2>${datos.infoDeLoAprendido[value].h}</h2>
+            <p>${datos.infoDeLoAprendido[value].p}</p>
             <div class="cont2">
-                <img src="${datos.infoDeLoAprendido[i].img}">
+                <img src="${datos.infoDeLoAprendido[value].img}">
             </div>
-        </div>
-    `
+        `
     document.getElementById('informacion').innerHTML += infoLoAprendidoHTML;
 }
+
+
+
 
 
 //////////////  Proyecto  //////////////  
@@ -246,70 +283,51 @@ for (let i = 0; i < datos.infoDeLoAprendido.length; i++) {
 for (let i = 0; i < datos.infoProyectos.length / 6; i++) {
     buttonHTML =
         `
-        <button class="indicador" id='${datos.infoProyectos[i].nombre}'>${i + 1}</button>
+        <button class="indicador" id='${datos.infoProyectos[i].nombre}'>${datos.infoProyectosIcons[i].N}</button>
         `
     document.getElementById('indicadores').innerHTML += buttonHTML;
 
-    if (i === 0) {
-        document.querySelector('.indicador').classList.add('activo')
-    }
+    if (i === 0) document.querySelector('.indicador').classList.add('activo');
 
     setTimeout(() => {
         let cajaDeProyectos = document.getElementById(`${datos.infoProyectos[i].nombre}`)
         cajaDeProyectos.addEventListener("click", () => {
-            abrirInformacion(Proyectoddds, i)
+            inferior.classList.remove('arriba')
+            inferior.classList.remove('info')
+            inferior.classList.add('proyecto')
             document.querySelector('.numerosDePaginas .activo').classList.remove('activo')
             cajaDeProyectos.classList.add('activo');
+            mostarInformcaionProyectos(i)
         })
-    }, 1000)
+    }, 100)
+
 
 };
 
-datos.infoProyectos.forEach(hola => {
-    console.log('fuera')
-    generationsHTML = `
-        <figure class="contenedores">
-        <img src="${hola.img}">
-        <div class="proyectos-informacion">
-            <h2>${hola.nombre}</h2>
-            <div>
-            <a href="${hola.href}">
-            <i class="fa-brands fa-github"></i>
-            </a>
+const mostarInformcaionProyectos = (value) => {
+    let start = value * 6;
+    let end = start + 6;
+    if (end == 0) end + 6;
+    let ShowsProyects = datos.infoProyectos.slice(start, end)
+
+    proyects.innerHTML = '';
+    ShowsProyects.forEach(hola => {
+        generationsHTML = `
+            <figure class="contenedores">
+            <img src="${hola.img}">
+            <div class="proyectos-informacion">
+                <h2>${hola.nombre}</h2>
+                <div>
+                <a href="${hola.href}">
+                <i class="fa-brands fa-github"></i>
+                </a>
+                </div>
+                <div>
+                    <p>${hola.AboutP}</p>
+                </div>
             </div>
-            <div>
-                <p>${hola.AboutP}</p>
-            </div>
-        </div>
-    </figure>
-        `
-    proyects.innerHTML += generationsHTML;
-});
-
-
-
-
-
-function abrirInformacion(openSeccion, index) {
-    if (openSeccion === principal) {
-        console.log('principal');
-    } else if (openSeccion === iconosDeMenu) {
-        document.getElementById('informacionDeIconos').style.transform = `translateY(${index * -53}vh)`
-        inferior.classList.add('arriba')
-        inferior.classList.remove('info')
-        inferior.classList.remove('proyecto')
-    }
-    else if (openSeccion === logosF) {
-        document.getElementById('informacion').style.transform = `translateY(${index * -77}vh)`
-        inferior.classList.remove('arriba')
-        inferior.classList.add('info')
-        inferior.classList.remove('proyecto')
-    }
-
-    else if (openSeccion === Proyectoddds) {
-        document.getElementById('proyects').style.transform = `translateY(${index * -71}vh)`
-        inferior.classList.remove('arriba')
-        inferior.classList.remove('info')
-        inferior.classList.add('proyecto')
-    }
+        </figure>
+            `
+        proyects.innerHTML += generationsHTML;
+    });
 }

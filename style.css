@@ -13,7 +13,6 @@
     --primary-color-light: #F6F5FF;
     --proyectos: #DDD;
     --base-morada: #34163f;
-    ;
     --text-color: #383536;
     --color-2: #84a1bc;
     --color-3: #4c4f85;
@@ -23,12 +22,10 @@
 body {
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
-h2 {
-    color: #fff;
-}
-
+h2,
 p {
     color: #fff;
 }
@@ -46,6 +43,17 @@ img {
     width: 100%;
 }
 
+button {
+    cursor: pointer;
+    background-color: var(--color-4);
+    border-radius: 10px;
+    min-width: 7vw;
+    height: 9vh;
+    border: 1px solid var(--borde);
+    transition: 0.5s;
+    z-index: 4
+}
+
 video {
     position: absolute;
     width: 100%;
@@ -55,73 +63,33 @@ video {
 }
 
 
-
 /* ///////////////primeraParte/////////// */
-
-.parteSuperior {
-    height: 11%;
-    display: flex;
-    justify-content: space-around;
-    background-color: transparent;
-    z-index: 1;
-    position: relative;
-
-}
 
 .perfil {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 24%;
-    font-size: 1rem;
+    width: 14vw;
+    height: 10vh;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
 }
 
 .perfil img {
-    width: auto;
-    height: 90%;
-    margin-right: 25px;
-    border-radius: 20%;
+    border-radius: 50%;
+    margin-right: 1rem;
 }
 
-.listas {
-    display: flex;
-    align-items: center;
-    width: 64%;
-    justify-content: space-between;
+.perfil h2 {
+    font-size: 25px;
 }
-
-.lista {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 31%;
-    height: 84%;
-    color: #fff;
-    font-size: larger;
-    background-color: #d8b4a7;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid var(--borde);
-    font-size: 30px;
-}
-
-.lista.activo {
-    background-color: #934174;
-}
-
-
 
 
 /*////////////////////parteInferior/////////////////// */
 
 
 .parteInferior {
-    justify-content: space-between;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 89%;
-    width: 100%;
+    position: relative;
+    height: 100%;
 }
 
 /*////////////////////       sessionArriba     ///////////////////
@@ -137,10 +105,11 @@ video {
 
 .iconosDeMenu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 60%;
-    height: 17%;
-    margin: 1%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 12vh;
+    width: 63vw;
+    height: 12vh;
+    margin: 1rem;
     align-items: center;
     justify-items: center;
     background-color: var(--proyectos);
@@ -151,20 +120,6 @@ video {
     box-shadow: 0px 17px 15px 0px rgba(0, 0, 0, 0.54);
 }
 
-.menuIteam {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: var(--color-4);
-    border-radius: 10px;
-    width: 104px;
-    height: 88px;
-    border: 1px solid var(--borde);
-    transition: 0.5s;
-    z-index: 4;
-}
-
 .menuIteam.activo {
     background-color: #934174;
 }
@@ -172,24 +127,13 @@ video {
 .cajonDeIconos {
     background-color: #fff;
     transition: 0.5s;
-    width: 100%;
-    height: 77%;
+    width: 99vw;
+    height: 78vh;
     z-index: 1;
     overflow: hidden;
-    width: 93%;
-    height: 83%;
-    padding: 0% 1%;
-    margin: 1% auto;
+    padding: 0 1rem;
     border-radius: 10px;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
-}
-
-
-.informacionDeIconos {
-    display: flex;
-    flex-direction: column;
-    z-index: 5;
-
 }
 
 .carpetaDeslizantes {
@@ -229,11 +173,9 @@ video {
     background-color: var(--proyectos);
 }
 
-
 .descricion h2 {
     margin-bottom: 50px;
 }
-
 
 .descricion h2::after {
     position: absolute;
@@ -247,40 +189,37 @@ video {
 
 .foto {
     width: 40%;
-
 }
 
 /* modificar la clase */
 
-.parteInferior.info .sessionArriba,
-.parteInferior.proyecto .sessionArriba {
-    height: 13%;
+body.info .sessionArriba,
+body.proyecto .sessionArriba {
+    height: 11%;
     justify-content: space-between;
 }
 
-.parteInferior.arriba .sessionArriba {
-    height: 75%;
+body.arriba .sessionArriba {
+    height: 85%;
 }
 
-.parteInferior.info .carpetaDeslizantes,
-.parteInferior.proyecto .carpetaDeslizantes {
+body.info .carpetaDeslizantes,
+body.proyecto .carpetaDeslizantes {
     display: none;
 }
 
-.parteInferior.info .informacionDeIconos,
-.parteInferior.proyecto .informacionDeIconos {
-    height: 5%;
-    width: 84%;
+body.info .cajonDeIconos,
+body.proyecto .cajonDeIconos {
+    width: 8vw;
+    height: 1vh;
     margin: 0;
-    padding: 0;
 }
 
-.parteInferior.info .iconosDeMenu,
-.parteInferior.proyecto .iconosDeMenu {
+body.info .iconosDeMenu,
+body.proyecto .iconosDeMenu {
     height: 95%;
     background-color: transparent;
     margin: 0;
-    width: 85%;
 }
 
 /*////////////////////               seccionBajo                 ///////////////////
@@ -299,17 +238,17 @@ video {
 
 /* modificar la clase */
 
-.parteInferior.abajo .seccionBajo {
+body.abajo .seccionBajo {
     height: 60%;
 }
 
-.parteInferior.arriba .seccionBajo {
-    height: 25%;
+body.arriba .seccionBajo {
+    height: 15%;
 }
 
-.parteInferior.info .seccionBajo,
-.parteInferior.proyecto .seccionBajo {
-    height: 87%;
+body.info .seccionBajo,
+body.proyecto .seccionBajo {
+    height: 89%;
 }
 
 
@@ -325,50 +264,32 @@ video {
     align-items: center;
     height: 100%;
     width: 8%;
+    padding: 1rem;
     background-color: var(--proyectos);
     border-radius: 10px;
     transition: 1s;
-    padding: 15px;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
     -webkit-box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
     -moz-box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
     z-index: 1;
 }
 
-.frontal {
-    width: 83%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-4);
-    border-radius: 10px;
-    transition: 1s;
-    cursor: pointer;
-    border: solid 1px var(--borde);
-}
-
 .frontal.activo {
     background-color: var(--activo);
-    height: 58%;
+    height: 100%;
 }
 
 /* modificar la clase */
 
-.parteInferior.arriba .locosJBR {
+body.arriba .locosJBR {
     width: 30%;
     flex-direction: row;
     background: transparent;
 }
 
-.parteInferior.proyecto .locosJBR {
+body.proyecto .locosJBR {
     background: transparent;
     height: 60%;
-}
-
-.parteInferior.arriba .frontal {
-    height: 58%;
-    margin: 10px;
 }
 
 
@@ -376,49 +297,27 @@ video {
 /*////////////////////               informacion                ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
 .cajonDeInformacion {
-    height: 100%;
-    width: 60%;
-    border-radius: 10px;
-    background-color: #ddddddb1;
-    padding: 30px 65px 0;
-    z-index: 2;
-    overflow: hidden;
-    box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
-}
-
-
-
-.informacion {
-
-    transition: 1s;
-}
-
-
-.contenedor {
+    height: 86vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 95%;
-    margin-bottom: 60px;
     transition: 1s;
+    padding: 2rem;
     opacity: 1;
     background-color: var(--base-morada);
     border-radius: 10px;
-    padding: 0 5%;
 }
 
-.contenedor h2 {
+.cajonDeInformacion h2 {
     margin-bottom: 20px;
     font-size: 60px;
     width: 50%;
 }
 
-.contenedor p {
+.cajonDeInformacion p {
     font-size: 20px;
 }
-
-
 
 .cont2 {
     width: 80%;
@@ -431,25 +330,38 @@ video {
 
 /* modificar la clase */
 
-.parteInferior.proyecto .cajonDeInformacion {
+body.proyecto .cajonDeInformacion {
     width: 7%;
     height: 12%;
     border-radius: 30px;
     margin: 10px;
 }
 
-.parteInferior.proyecto .contenedor,
-.parteInferior.arriba .contenedor {
+body.proyecto .cajonDeInformacion h2,
+body.proyecto .cajonDeInformacion p,
+body.proyecto .cont2 {
     display: none;
 }
 
-.parteInferior.arriba .cajonDeInformacion {
+body.proyecto .cajonDeInformacion h2,
+body.proyecto .cajonDeInformacion p,
+body.proyecto .cont2 {
+    display: none;
+}
+
+body.arriba .cajonDeInformacion h2,
+body.arriba .cajonDeInformacion p,
+body.arriba .cont2 {
+    display: none;
+}
+
+body.arriba .cajonDeInformacion {
     width: 10%;
     height: 60%;
     border-radius: 30px;
 }
 
-.parteInferior.info .informacion {
+body.info .informacion {
     margin: 0 5% 0 1%;
     max-width: 892px;
 }
@@ -467,8 +379,6 @@ video {
     transition: 1s;
     border-radius: 10px;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
-    -webkit-box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
-    -moz-box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
     z-index: 3;
 }
 
@@ -485,32 +395,14 @@ video {
     z-index: 10;
 }
 
-.numerosDePaginas button {
-    min-width: 6vw;
-    min-height: 4vh;
-}
-
-/* 
-.numeros {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 29%;
-    height: 100%;
-    background-color: var(--fondo);
-    border-radius: 10px;
-    border: 1px solid var(--borde);
-}
-
-.numeros.activo {
+.numerosDePaginas .indicador.activo {
     background-color: var(--activo);
-} */
+}
 
 .proyectos {
-    transform: translate(0%, 0%);
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-auto-rows: 35vh;
+    grid-auto-rows: 37vh;
     align-items: center;
     border-radius: 10px;
     transition: 1s;
@@ -520,8 +412,8 @@ video {
     position: relative;
     padding: 5px;
     background-color: #a773ba;
-    height: 31vh;
-    width: 97%;
+    height: 35vh;
+    width: 24vw;
     border-radius: 10px;
     transition: 1s;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
@@ -580,7 +472,6 @@ video {
 
 /* modificar con hover */
 
-
 .contenedores:hover h2,
 .contenedores:hover p,
 .contenedores:hover i {
@@ -594,23 +485,22 @@ video {
 }
 
 
-
 /* modificar la clase */
 
 
-.parteInferior.proyecto .cajasDeProyectos {
+body.proyecto .cajasDeProyectos {
     width: 80%;
     height: 100%;
 }
 
-.parteInferior.info .numerosDePaginas,
-.parteInferior.arriba .numerosDePaginas {
+body.info .numerosDePaginas,
+body.arriba .numerosDePaginas {
     position: initial;
     width: 61%;
 }
 
-.parteInferior.info .cajasDeProyectos,
-.parteInferior.arriba .cajasDeProyectos {
+body.info .cajasDeProyectos,
+body.arriba .cajasDeProyectos {
     width: 25%;
     height: 30%;
     background: transparent;
@@ -618,24 +508,24 @@ video {
     padding: 1% 1%;
 }
 
-.parteInferior.arriba .cajasDeProyectos {
+body.arriba .cajasDeProyectos {
     height: 100%;
 }
 
 
-.parteInferior.info .proyectos,
-.parteInferior.arriba .proyectos {
+body.info .proyectos,
+body.arriba .proyectos {
     display: none;
 }
 
-.parteInferior.info .numerosDePaginas {
+body.info .numerosDePaginas {
     width: 100%;
     height: 100%;
 
 }
 
-.parteInferior.info .numeros,
-.parteInferior.arriba .numeros {
+body.info .numeros,
+body.arriba .numeros {
     width: 30%;
     height: 100%;
 }
