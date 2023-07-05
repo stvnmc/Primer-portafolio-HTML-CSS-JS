@@ -319,7 +319,7 @@ const mostarInformcaionProyectos = (value) => {
                 <h2>${hola.nombre}</h2>
                 <div>
                 <a href="${hola.href}">
-                <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github"></i>
                 </a>
                 </div>
                 <div>
