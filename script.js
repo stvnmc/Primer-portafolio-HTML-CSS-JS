@@ -1,17 +1,3 @@
-const inferior = document.querySelector('body')
-//Redes sociales
-
-const Deslizantes = document.querySelectorAll(".carpetaDeslizantes")
-// const iconosDeMenu = document.querySelectorAll(".menuIteam")
-//Principal
-const principal = document.querySelectorAll('.lista')
-// lenguages y franworks
-const contenedor = document.querySelectorAll(".contenedor")
-const logosF = document.querySelectorAll('.frontal')
-// Proyectos
-const Proyectoddds = document.querySelectorAll('.numerosDePaginas')
-
-
 const datos = {
     "infoDeContactos": [
         {
@@ -180,7 +166,9 @@ const datos = {
         { N: '<i class="fa-solid fa-5"></i>' },
         { N: '<i class="fa-solid fa-6"></i>' }
     ]
-}
+};
+
+const inferior = document.querySelector('body');
 
 //////////////   Conctacto //////////////
 
@@ -213,23 +201,17 @@ const mostarInformcaionContacto = (value) => {
     document.getElementById('informacionDeIconos').innerHTML = '';
     infoContactoHTML =
         `
-            <div class="carpetaDeslizantes">
-                        <div class="descricion">
+            <section class="carpetaDeslizantes">
+                        
                             <h2>${datos.infoDeContactos[value].h2}</h2>
                             <p>${datos.infoDeContactos[value].p}</p>
-                        </div>
-                        <div class="foto">
-                            <img src="${datos.infoDeContactos[value].img}">
-                        </div>
-                    </div>
+                            <img src="${datos.infoDeContactos[value].img}" alt="${datos.infoDeContactos[value].h2}">
+                        
+                    </section>
             `
     document.getElementById('informacionDeIconos').innerHTML += infoContactoHTML;
-}
-mostarInformcaionContacto(0)
-
-
-
-
+};
+mostarInformcaionContacto(0);
 
 
 //////////////   Lo Aprendido //////////////
@@ -258,24 +240,19 @@ for (let i = 0; i < datos.infoDeLoAprendido.length; i++) {
             button.classList.toggle('activo')
         })
     }, 100);
-}
+};
 
 const mostarInformcaionLoAprendido = (value) => {
     if (value == 0) value = 0;
     document.getElementById('informacion').innerHTML = '';
     infoLoAprendidoHTML =
-        `
+        `<div class="contentInf">
             <h2>${datos.infoDeLoAprendido[value].h}</h2>
             <p>${datos.infoDeLoAprendido[value].p}</p>
-            <div class="cont2">
-                <img src="${datos.infoDeLoAprendido[value].img}">
-            </div>
-        `
+            <img src="${datos.infoDeLoAprendido[value].img}">
+        </div>`
     document.getElementById('informacion').innerHTML += infoLoAprendidoHTML;
-}
-
-
-
+};
 
 
 //////////////  Proyecto  //////////////  
@@ -330,4 +307,4 @@ const mostarInformcaionProyectos = (value) => {
             `
         proyects.innerHTML += generationsHTML;
     });
-}
+};
