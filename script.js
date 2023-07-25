@@ -176,7 +176,7 @@ const mostarInformcaionContacto = (value) => {
                     <p>${datos.infoDeContactos[value].p}</p>
                     <li><i class="${datos.infoDeContactos[value].i}"></i></li>
                 </div>
-                    <div class="infoImg">
+                    <div>
                         <img src="${datos.infoDeContactos[value].img}" alt="${datos.infoDeContactos[value].h2}">
                     </div>
             </section>
@@ -218,11 +218,22 @@ const mostarInformcaionLoAprendido = (value) => {
     if (value == 0) value = 0;
     document.getElementById('informacion').innerHTML = '';
     infoLoAprendidoHTML =
-        `<div class="contentInf">
-            <h2>${datos.infoDeLoAprendido[value].h}</h2>
-            <p>${datos.infoDeLoAprendido[value].p}</p>
-            <img src="${datos.infoDeLoAprendido[value].img}">
-        </div>`
+        `<aside class="contentInf">
+            <div class="info">
+                <h1>${datos.infoDeLoAprendido[value].h}</h1>
+                <p>${datos.infoDeLoAprendido[value].p}</p>
+                <li>iconos</li>
+            </div>
+            <div>
+                <h2>Ejemplos </h2>
+                <div class="contentImg">
+                <img src="${datos.infoDeLoAprendido[value].img}">
+                <img src="${datos.infoDeLoAprendido[value].img}">
+                <img src="${datos.infoDeLoAprendido[value].img}">
+                <img src="${datos.infoDeLoAprendido[value].img}">
+                </div>
+            </div>
+        </aside>`
     document.getElementById('informacion').innerHTML += infoLoAprendidoHTML;
 };
 

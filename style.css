@@ -48,10 +48,14 @@ button {
     cursor: pointer;
     background-color: var(--color-4);
     border-radius: 10px;
+    margin: 0px 4px 4px 0;
     min-width: 4vw;
     height: 6vh;
     border: 1px solid var(--borde);
-    transition: 0.5s;
+}
+
+button:hover{
+    background-color: #d9dce6;
 }
 
 video {
@@ -69,27 +73,21 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0rem;
     transition: 0.5s;
 }
 
 .iconosDeMenu {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    padding: 1rem;
-    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    width: 22vw;
+    height: 9vh;
+    padding: 1vw;
+    margin-bottom: 1vw;
     background-color: var(--proyectos);
     transition: 0.5s;
     border-radius: 10px;
     box-shadow: 0px 17px 15px 0px rgba(0, 0, 0, 0.54);
-}
-
-body.info .iconosDeMenu,
-body.proyecto .iconosDeMenu {
-    min-height: 11vh;
-    width: 27vw;
-    background-color: transparent;
-    margin: 0;
 }
 
 .sessionArriba .perfil {
@@ -102,9 +100,9 @@ body.proyecto .iconosDeMenu {
 }
 
 .cajonDeIconos {
+    height: 87%;
     background-color: var(--primary-color-light);
     transition: 0.5s;
-    height: 68vh;
     border-radius: 10px;
     box-shadow: 5px 4px 11px 0px rgba(0, 0, 0, 0.58);
 }
@@ -115,12 +113,17 @@ body.proyecto .iconosDeMenu {
     background-color: #34163f;
     border-radius: 10px;
     margin: 1rem;
-    transition: 0.5s;
     height: 94%;
     padding: 2rem;
 }
 
-.carpetaDeslizantes h1 {
+.carpetaDeslizantes div,
+.contentInf div {
+    width: 50%;
+}
+
+.carpetaDeslizantes h1,
+.contentInf h1 {
     font-size: 3vw;
     margin-bottom: 4rem;
 }
@@ -129,21 +132,8 @@ body.proyecto .iconosDeMenu {
     margin-bottom: 7rem;
 }
 
-
-/* modificar la clase */
-
 body.arriba .sessionArriba {
     height: 82vh;
-}
-
-body.info .carpetaDeslizantes,
-body.proyecto .carpetaDeslizantes {
-    display: none;
-}
-
-body.info .cajonDeIconos,
-body.proyecto .cajonDeIconos {
-    height: 0;
 }
 
 /*////////////////////               seccionBajo                 ///////////////////
@@ -151,13 +141,11 @@ body.proyecto .cajonDeIconos {
 
 .seccionBajo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
+    padding:1rem;
     transition: 0.5s;
 }
-
-/* modificar la clase */
 
 body.abajo .seccionBajo {
     height: 60%;
@@ -169,48 +157,57 @@ body.abajo .seccionBajo {
 .locosJBR {
     display: flex;
     flex-direction: column;
-    height: 91%;
+    justify-content: space-around;
     padding: 1rem;
     background-color: var(--proyectos);
     border-radius: 10px;
-    transition: 1s;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
 }
 
 .cajonDeInformacion {
     height: 80vh;
     width: 73vw;
-    transition: 1s;
-    padding: 2rem;
+    transition: 0.5s;
+    background-color: var(--proyectos);
+    border-radius: 10px;
+}
+
+.contentInf {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
     background-color: var(--base-morada);
     border-radius: 10px;
+    height: 95%;
+}
+
+
+.contentImg {
+    display: grid;
+    grid-template-columns: repeat(2, 93%);
+    gap: 1rem;
+}
+
+.info .locosJBR .activo {
+    height: 60%;
+    transition: 0.5s;
 }
 
 /* modificar la clase */
 body.arriba .locosJBR {
-    height: 12vh;
     flex-direction: row;
     background: transparent;
 }
 
+body.info .locosJBR {
+    height: 50vh;
+}
 
 body.proyecto .cajonDeInformacion,
 body.arriba .cajonDeInformacion {
-    width: 5vw;
-    height: 12%;
-    margin: 10px;
+    width: 2vw;
+    height: 0;
 }
-
-body.proyecto .contentInf,
-body.arriba .contentInf {
-    display: none;
-}
-
-body.info .informacion {
-    margin: 0 5% 0 1%;
-    max-width: 892px;
-}
-
 
 /*////////////////////               cajasDeProyectos                ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
@@ -231,10 +228,6 @@ body.info .informacion {
 .numerosDePaginas {
     display: flex;
     justify-content: center;
-}
-
-.numerosDePaginas button {
-    margin-right: 4px;
 }
 
 body.info .numerosDePaginas {
@@ -259,7 +252,6 @@ body.info .cajasDeProyectos h1 {
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
-    transition: 0.5s;
 }
 
 .contenedores {
@@ -267,7 +259,6 @@ body.info .cajasDeProyectos h1 {
     background-color: #a773ba;
     height: 33vh;
     border-radius: 10px;
-    transition: 1s;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
     overflow: hidden;
 }
@@ -285,7 +276,6 @@ body.info .cajasDeProyectos h1 {
     height: 100%;
     padding: 30px;
     font-size: 1em;
-    transition: opacity 1s, transform 1s;
     overflow: hidden;
     cursor: pointer;
 }
@@ -337,11 +327,17 @@ body.info .cajasDeProyectos h1 {
 
 body.arriba .cajasDeProyectos,
 body.info .cajasDeProyectos,
-body.proyecto .locosJBR {
+body.proyecto .locosJBR,
+body.info .iconosDeMenu,
+body.proyecto .iconosDeMenu {
     background: transparent;
 }
 
 body.info .proyectos,
-body.arriba .proyectos {
+body.arriba .proyectos,
+body.proyecto .contentInf,
+body.arriba .contentInf,
+body.info .carpetaDeslizantes,
+body.proyecto .carpetaDeslizantes {
     display: none;
 }
