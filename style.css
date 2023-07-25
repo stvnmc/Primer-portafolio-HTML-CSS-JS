@@ -21,6 +21,7 @@
 
 body {
     height: 100vh;
+    overflow: hidden;
 }
 
 h2,
@@ -28,7 +29,6 @@ h1,
 h3,
 p {
     color: #fff;
-    font-size: 20px;
 }
 
 img {
@@ -48,11 +48,10 @@ button {
     cursor: pointer;
     background-color: var(--color-4);
     border-radius: 10px;
-    min-width: 5vw;
-    height: 5vh;
+    min-width: 4vw;
+    height: 6vh;
     border: 1px solid var(--borde);
     transition: 0.5s;
-    z-index: 4
 }
 
 video {
@@ -60,35 +59,29 @@ video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 /*////////////////////       sessionArriba     ///////////////////
 ///////////////////////////////////////////////////////////////// */
 
 .sessionArriba {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: 1s;
+    padding: 1rem;
+    transition: 0.5s;
 }
 
 .iconosDeMenu {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 40vw;
-    height: 12vh;
-    margin: 1rem;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(4, 25%);
+    padding: 1rem;
+    margin-bottom: 1rem;
     background-color: var(--proyectos);
-    transition: 1s;
+    transition: 0.5s;
     border-radius: 10px;
     box-shadow: 0px 17px 15px 0px rgba(0, 0, 0, 0.54);
-}
-
-.menuIteam.activo {
-    background-color: #934174;
 }
 
 body.info .iconosDeMenu,
@@ -111,33 +104,36 @@ body.proyecto .iconosDeMenu {
 .cajonDeIconos {
     background-color: var(--primary-color-light);
     transition: 0.5s;
-    width: 98vw;
     height: 68vh;
     border-radius: 10px;
     box-shadow: 5px 4px 11px 0px rgba(0, 0, 0, 0.58);
 }
 
 .carpetaDeslizantes {
+    display: flex;
+    justify-content: space-between;
     background-color: #34163f;
     border-radius: 10px;
-    overflow: hidden;
     margin: 1rem;
     transition: 0.5s;
     height: 94%;
-    font-size: 25px;
-    padding: 1rem;
+    padding: 2rem;
 }
+
+.carpetaDeslizantes h1 {
+    font-size: 3vw;
+    margin-bottom: 4rem;
+}
+
+.carpetaDeslizantes p {
+    margin-bottom: 7rem;
+}
+
 
 /* modificar la clase */
 
-body.info .sessionArriba,
-body.proyecto .sessionArriba {
-    height: 11%;
-    justify-content: space-between;
-}
-
 body.arriba .sessionArriba {
-    height: 84vh;
+    height: 82vh;
 }
 
 body.info .carpetaDeslizantes,
@@ -147,21 +143,17 @@ body.proyecto .carpetaDeslizantes {
 
 body.info .cajonDeIconos,
 body.proyecto .cajonDeIconos {
-    width: 8vw;
-    height: 1vh;
-    margin: 0;
+    height: 0;
 }
 
 /*////////////////////               seccionBajo                 ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
 
 .seccionBajo {
-    position: relative;
     display: flex;
     justify-content: space-around;
-    background-position: center;
     align-items: center;
-    width: 100vw;
+    padding: 1rem;
     transition: 0.5s;
 }
 
@@ -171,26 +163,13 @@ body.abajo .seccionBajo {
     height: 60%;
 }
 
-body.arriba .seccionBajo {
-    height: 15%;
-}
-
-body.info .seccionBajo,
-body.proyecto .seccionBajo {
-    height: 89%;
-}
-
-
 /*////////////////////              informacion                   ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
 
 .locosJBR {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 9vw;
+    height: 91%;
     padding: 1rem;
     background-color: var(--proyectos);
     border-radius: 10px;
@@ -198,14 +177,9 @@ body.proyecto .seccionBajo {
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
 }
 
-.frontal.activo {
-    background-color: var(--activo);
-    height: 100%;
-}
-
 .cajonDeInformacion {
-    height: 86vh;
-    width: 54vw;
+    height: 80vh;
+    width: 73vw;
     transition: 1s;
     padding: 2rem;
     background-color: var(--base-morada);
@@ -214,22 +188,16 @@ body.proyecto .seccionBajo {
 
 /* modificar la clase */
 body.arriba .locosJBR {
-    width: 25vw;
+    height: 12vh;
     flex-direction: row;
     background: transparent;
 }
 
-body.proyecto .locosJBR {
-    background: transparent;
-    height: 60%;
-    width: 6vw;
-}
 
 body.proyecto .cajonDeInformacion,
 body.arriba .cajonDeInformacion {
     width: 5vw;
     height: 12%;
-    border-radius: 30px;
     margin: 10px;
 }
 
@@ -251,13 +219,13 @@ body.info .informacion {
 .cajasDeProyectos {
     background-color: var(--proyectos);
     padding: 1rem;
-    transition: 1s;
+    transition: 0.5s;
     border-radius: 10px;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
 }
 
 .cajasDeProyectos h1 {
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .numerosDePaginas {
@@ -265,21 +233,29 @@ body.info .informacion {
     justify-content: center;
 }
 
-
 .numerosDePaginas button {
-    margin: 0;
-    height: 6vh;
-    min-width: 4vw;
+    margin-right: 4px;
 }
 
-.numerosDePaginas .indicador.activo {
+body.info .numerosDePaginas {
+    flex-direction: column;
+    width: 5vw;
+}
+
+body.info .cajasDeProyectos h1 {
+    font-size: 1vw;
+}
+
+.menuIteam.activo,
+.numerosDePaginas .indicador.activo,
+.frontal.activo {
     background-color: var(--activo);
 }
 
 .proyectos {
     display: grid;
     grid-template-columns: repeat(3, 32.9%);
-    grid-auto-rows: 35vh;
+    grid-auto-rows: 34vh;
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
@@ -343,7 +319,6 @@ body.info .informacion {
     transition-delay: 0.30s;
 }
 
-
 /* modificar con hover */
 
 .contenedores:hover h2,
@@ -358,19 +333,12 @@ body.info .informacion {
     transform: scale(1.5);
 }
 
-
 /* modificar la clase */
 
-body.proyecto .cajasDeProyectos {
-    width: 82vw;
-    height: 85vh;
-}
-
+body.arriba .cajasDeProyectos,
 body.info .cajasDeProyectos,
-body.arriba .cajasDeProyectos {
-    height: 15vh;
+body.proyecto .locosJBR {
     background: transparent;
-    width: 25vw;
 }
 
 body.info .proyectos,

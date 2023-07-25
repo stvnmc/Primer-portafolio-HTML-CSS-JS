@@ -6,18 +6,20 @@ const datos = {
             p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
             img: 'img/One piece, Yamato.jpg'
         }, {
-            i: 'fa-brands fa-discord',
-            h2: 'Instagram & Discord',
+            i: 'fa-brands fa-instagram',
+            h2: 'Instagram',
             p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
             img: 'img/One piece, Yamato.jpg'
         }, {
-            i: 'fa-brands fa-discord',
+            i: 'fa-brands fa-github',
             h2: 'Git',
-            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            p: `Como desarrollador autodidacta desde mis comienzos siempre estuve aplicando lo que aprendía haciendo proyectos 
+            que destacaran los conocimientos adquiridos, estudiando las mejores prácticas, entendiendo cómo funciona la programación 
+            y la mejor forma de emplear su uso.`,
             img: 'img/One piece, Yamato.jpg'
         }, {
-            i: 'fa-solid fa-crop-simple',
-            h2: 'Fraworts',
+            i: 'fa-brands fa-youtube',
+            h2: 'Youtube',
             p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
             img: 'img/One piece, Yamato.jpg'
         }
@@ -131,40 +133,7 @@ const datos = {
         nombre: '18 5dsd',
         img: 'img/blurry loading.png',
         AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '19 5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '20 5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '21 5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '22 5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
-    },
-    {
-        nombre: '23 5dsd',
-        img: 'img/blurry loading.png',
-        AboutP: 'XBOX and PLAYS'
     }
-    ],
-    'infoProyectosIcons': [
-        { N: '<i class="fa-solid fa-1"></i>' },
-        { N: '<i class="fa-solid fa-2"></i>' },
-        { N: '<i class="fa-solid fa-3"></i>' },
-        { N: '<i class="fa-solid fa-4"></i>' },
-        { N: '<i class="fa-solid fa-5"></i>' },
-        { N: '<i class="fa-solid fa-6"></i>' }
     ]
 };
 
@@ -202,13 +171,16 @@ const mostarInformcaionContacto = (value) => {
     infoContactoHTML =
         `
             <section class="carpetaDeslizantes">
-                        
-                            <h2>${datos.infoDeContactos[value].h2}</h2>
-                            <p>${datos.infoDeContactos[value].p}</p>
-                            <img src="${datos.infoDeContactos[value].img}" alt="${datos.infoDeContactos[value].h2}">
-                        
-                    </section>
-            `
+                <div>
+                    <h1>${datos.infoDeContactos[value].h2}</h1>
+                    <p>${datos.infoDeContactos[value].p}</p>
+                    <li><i class="${datos.infoDeContactos[value].i}"></i></li>
+                </div>
+                    <div class="infoImg">
+                        <img src="${datos.infoDeContactos[value].img}" alt="${datos.infoDeContactos[value].h2}">
+                    </div>
+            </section>
+        `
     document.getElementById('informacionDeIconos').innerHTML += infoContactoHTML;
 };
 mostarInformcaionContacto(0);
@@ -260,7 +232,7 @@ const mostarInformcaionLoAprendido = (value) => {
 for (let i = 0; i < datos.infoProyectos.length / 6; i++) {
     buttonHTML =
         `
-        <button class="indicador" id='${datos.infoProyectos[i].nombre}'>${datos.infoProyectosIcons[i].N}</button>
+        <button class="indicador" id='${datos.infoProyectos[i].nombre}'><i class="fa-solid fa-${i + 1}"></i></button>
         `
     document.getElementById('indicadores').innerHTML += buttonHTML;
 
@@ -277,8 +249,6 @@ for (let i = 0; i < datos.infoProyectos.length / 6; i++) {
             mostarInformcaionProyectos(i)
         })
     }, 100)
-
-
 };
 
 const mostarInformcaionProyectos = (value) => {
