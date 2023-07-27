@@ -3,7 +3,7 @@ const datos = {
         {
             i: 'fa-brands fa-linkedin',
             h2: 'Linkedin',
-            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            p: 'este es un parofo donde tedsssssssssngodsdsdsd sdsdsdsdsdsdsdsdsdsdsdsds dsdsdsdsdsdsdsdsdsdsds que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
             img: 'img/One piece, Yamato.jpg'
         }, {
             i: 'fa-brands fa-instagram',
@@ -171,14 +171,18 @@ const mostarInformcaionContacto = (value) => {
     infoContactoHTML =
         `
             <section class="carpetaDeslizantes">
-                <div>
+                <div class="contentDivided">
                     <h1>${datos.infoDeContactos[value].h2}</h1>
                     <p>${datos.infoDeContactos[value].p}</p>
-                    <li><i class="${datos.infoDeContactos[value].i}"></i></li>
-                </div>
                     <div>
-                        <img src="${datos.infoDeContactos[value].img}" alt="${datos.infoDeContactos[value].h2}">
+                        <button><i class="${datos.infoDeContactos[value].i}"></i></button>
+                        <button><i class="${datos.infoDeContactos[value].i}"></i></button>
+                        <button><i class="${datos.infoDeContactos[value].i}"></i></button>
                     </div>
+                </div>
+                <div  class="contentDivided">
+                    <img src="${datos.infoDeContactos[value].img}" alt="${datos.infoDeContactos[value].h2}">
+                </div>
             </section>
         `
     document.getElementById('informacionDeIconos').innerHTML += infoContactoHTML;
@@ -219,12 +223,16 @@ const mostarInformcaionLoAprendido = (value) => {
     document.getElementById('informacion').innerHTML = '';
     infoLoAprendidoHTML =
         `<aside class="contentInf">
-            <div class="info">
+            <div class="contentDivided">
                 <h1>${datos.infoDeLoAprendido[value].h}</h1>
                 <p>${datos.infoDeLoAprendido[value].p}</p>
-                <li>iconos</li>
+                <div>
+                    <button><i class="${datos.infoDeContactos[value].i}"></i></button>
+                    <button><i class="${datos.infoDeContactos[value].i}"></i></button>
+                    <button><i class="${datos.infoDeContactos[value].i}"></i></button>
+                </div>
             </div>
-            <div>
+            <div class="contentDivided">
                 <h2>Ejemplos </h2>
                 <div class="contentImg">
                 <img src="${datos.infoDeLoAprendido[value].img}">
@@ -272,9 +280,9 @@ const mostarInformcaionProyectos = (value) => {
     ShowsProyects.forEach(hola => {
         generationsHTML = `
             <figure class="contenedores">
-            <img src="${hola.img}">
-            <div class="proyectos-informacion">
-                <h2>${hola.nombre}</h2>
+                <img src="${hola.img}">
+                <div class="proyectos-informacion">
+                    <h2>${hola.nombre}</h2>
                 <div>
                 <a href="${hola.href}">
                     <i class="fa-brands fa-github"></i>

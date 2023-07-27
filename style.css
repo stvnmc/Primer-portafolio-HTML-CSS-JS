@@ -54,7 +54,7 @@ button {
     border: 1px solid var(--borde);
 }
 
-button:hover{
+button:hover {
     background-color: #d9dce6;
 }
 
@@ -73,7 +73,7 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1rem 0rem;
+    padding: 1vh 1vw 0;
     transition: 0.5s;
 }
 
@@ -117,19 +117,20 @@ video {
     padding: 2rem;
 }
 
-.carpetaDeslizantes div,
-.contentInf div {
-    width: 50%;
+.contentDivided {
+    width: 48%;
 }
 
 .carpetaDeslizantes h1,
 .contentInf h1 {
-    font-size: 3vw;
-    margin-bottom: 4rem;
+    font-size: 4vw;
+    margin-bottom: 3vw;
 }
 
-.carpetaDeslizantes p {
-    margin-bottom: 7rem;
+.carpetaDeslizantes p,
+.info p {
+    margin-bottom: 5vw;
+    font-size: 2vw;
 }
 
 body.arriba .sessionArriba {
@@ -143,7 +144,8 @@ body.arriba .sessionArriba {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding:1rem;
+    padding: 1vh 1vw;
+    ;
     transition: 0.5s;
 }
 
@@ -165,9 +167,6 @@ body.abajo .seccionBajo {
 }
 
 .cajonDeInformacion {
-    height: 80vh;
-    width: 73vw;
-    transition: 0.5s;
     background-color: var(--proyectos);
     border-radius: 10px;
 }
@@ -178,15 +177,27 @@ body.abajo .seccionBajo {
     padding: 1rem;
     background-color: var(--base-morada);
     border-radius: 10px;
-    height: 95%;
+    height: 76vh;
+    width: 78vw;
 }
 
 
 .contentImg {
     display: grid;
-    grid-template-columns: repeat(2, 93%);
+    grid-template-columns: repeat(2, 50%);
     gap: 1rem;
 }
+
+.contentDivided div {
+    text-align: center;
+}
+
+.contentDivided:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 .info .locosJBR .activo {
     height: 60%;
@@ -215,7 +226,7 @@ body.arriba .cajonDeInformacion {
 
 .cajasDeProyectos {
     background-color: var(--proyectos);
-    padding: 1rem;
+    padding: 1vw;
     transition: 0.5s;
     border-radius: 10px;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
@@ -247,10 +258,9 @@ body.info .cajasDeProyectos h1 {
 
 .proyectos {
     display: grid;
-    grid-template-columns: repeat(3, 32.9%);
-    grid-auto-rows: 34vh;
-    align-items: center;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 28vw);
+    gap: 0.6vw;
+    margin:  0.5vw 0;
     border-radius: 10px;
 }
 
