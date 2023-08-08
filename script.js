@@ -3,42 +3,65 @@ const datos = {
         {
             i: 'fa-brands fa-linkedin',
             h2: 'Linkedin',
-            p: 'este es un parofo donde tedsssssssssngodsdsdsd sdsdsdsdsdsdsdsdsdsdsdsds dsdsdsdsdsdsdsdsdsdsds que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            p: `Como desarrollador autodidacta desde mis comienzos siempre estuve aplicando lo que aprendía haciendo proyectos que destacaran los conocimientos
+            adquiridos, estudiando las mejores prácticas, entendiendo cómo funciona la programación y la mejor forma de emplear su uso.`,
             img: 'img/One piece, Yamato.jpg'
         }, {
             i: 'fa-brands fa-instagram',
             h2: 'Instagram',
-            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
-            img: 'img/One piece, Yamato.jpg'
+            p: `Empleo Instagram para compartir imágenes y videos de mis proyectos web, brindando una visión visual de mis habilidades. Esta plataforma me permite 
+            presentar de manera atractiva mi trabajo a reclutadores y seguidores, destacando mis logros en el desarrollo.`,
+            img: 'img/Instagram.png'
         }, {
             i: 'fa-brands fa-github',
             h2: 'Git',
-            p: `Como desarrollador autodidacta desde mis comienzos siempre estuve aplicando lo que aprendía haciendo proyectos 
-            que destacaran los conocimientos adquiridos, estudiando las mejores prácticas, entendiendo cómo funciona la programación 
-            y la mejor forma de emplear su uso.`,
-            img: 'img/One piece, Yamato.jpg'
+            p: `Logré buenos hábitos y prácticas de código aplicables a cualquier trabajo como desarrollador, logré crear distintos proyectos y aprender sobre 
+            distintas tecnologías y frameworks como: HTML, CSS, JavaScript, React, Git, entre otros mas.`,
+            img: 'img/Git.png'
         }, {
             i: 'fa-brands fa-youtube',
             h2: 'Youtube',
-            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            p: `Utilizo YouTube como plataforma para compartir videos detallados de mis proyectos de codificación. Esto permite a otros ver de manera visual y comprensible
+            cómo abordo diferentes desafíos y desarrollo soluciones.`,
             img: 'img/One piece, Yamato.jpg'
         }
     ],
     "infoDeLoAprendido": [
         {
-            i: 'fa-brands fa-square-js',
+            i: 'fa-brands fa-html5',
             h: 'HTML & CSS',
-            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            p: `Opto por HTML y CSS para construir mis proyectos web debido a su versatilidad y poder creativo.
+            Estos lenguajes me permiten dar vida a mis ideas con estructura y estilo, creando experiencias 
+            cautivadoras y funcionales que reflejan mis habilidades de desarrollo.`,
             img: 'img/One piece, Yamato.jpg'
-        }, {
-            i: 'fa-brands fa-bootstrap',
+        },
+        {
+            i: 'fa-brands fa-square-js',
             h: 'JavaScript',
-            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
-            img: 'img/One piece,Kiado.jpg'
+            p: `Integro JavaScript en mis proyectos web para potenciar la interactividad y la dinámica. 
+            Con este lenguaje, transformo conceptos en funciones y características envolventes, 
+            proporcionando experiencias web fluidas y enriquecedoras que demuestran mi compromiso con la excelencia en el desarrollo.`,
+            img: 'img/One piece, Falco.jpg'
         }, {
             i: 'fa-brands fa-react',
             h: 'React',
-            p: 'este es un parofo donde tengo que esplicar lo que e visto js y venderla motos Lorem ipsum dolor',
+            p: `Abrazo React en mis proyectos web por su enfoque en componentes reutilizables y eficiencia. A través de esta biblioteca,
+            construyo interfaces dinámicas y de alto rendimiento que reflejan mi dedicación a proporcionar experiencias digitales 
+            modernas y cautivadoras en mis desarrollos.`,
+            img: 'img/One piece,Kiado.jpg'
+        }, {
+            i: 'fa-solid fa-code',
+            h: 'TypeScript',
+            p: `Empleo TypeScript en mis proyectos web para elevar la calidad de mi código. Con su tipado estático y herramientas
+            de desarrollo robustas, construyo aplicaciones más seguras y mantenibles. Mi compromiso con la excelencia técnica 
+            se refleja en cada implementación respaldada por TypeScript.`,
+            img: 'img/One piece, Falco.jpg'
+        }, {
+            i: 'fa-brands fa-bootstrap',
+            h: 'Bootstrap',
+            p: `Bootstrap en mis proyectos web para agilizar el diseño responsivo y la estética. Sus componentes
+            predefinidos me permiten crear interfaces pulidas y adaptables, demostrando mi capacidad para entregar 
+            experiencias visuales y funcionales de alta calidad.`,
             img: 'img/One piece, Falco.jpg'
         }
     ],
@@ -137,6 +160,7 @@ const datos = {
     ]
 };
 
+
 const inferior = document.querySelector('body');
 
 //////////////   Conctacto //////////////
@@ -176,8 +200,6 @@ const mostarInformcaionContacto = (value) => {
                     <p>${datos.infoDeContactos[value].p}</p>
                     <div>
                         <button><i class="${datos.infoDeContactos[value].i}"></i></button>
-                        <button><i class="${datos.infoDeContactos[value].i}"></i></button>
-                        <button><i class="${datos.infoDeContactos[value].i}"></i></button>
                     </div>
                 </div>
                 <div  class="contentDivided">
@@ -191,60 +213,64 @@ mostarInformcaionContacto(0);
 
 
 //////////////   Lo Aprendido //////////////
+function createButtons() {
 
-for (let i = 0; i < datos.infoDeLoAprendido.length; i++) {
-    buttonLoAprendidoHTML =
-        `
-        <button class="frontal" id='${datos.infoDeLoAprendido[i].h}'>
-        <i class="${datos.infoDeLoAprendido[i].i}"></i>
-        </button>
-        `
-    document.getElementById('logosParteFrontal').innerHTML += buttonLoAprendidoHTML;
+    // Creamos los bototens 
+    for (let i = 0; i < datos.infoDeLoAprendido.length; i++) {
+        buttonLoAprendidoHTML =
+            `
+            <button class="frontal" id='${datos.infoDeLoAprendido[i].h}'>
+                <i class="${datos.infoDeLoAprendido[i].i}"></i>
+            </button>
+            `;
+        document.getElementById('logosParteFrontal').innerHTML += buttonLoAprendidoHTML;
 
-    if (i === 0) document.getElementById(`${datos.infoDeLoAprendido[i].h}`).classList.add('activo');
+        if (i === 0) document.getElementById(`${datos.infoDeLoAprendido[i].h}`).classList.add('activo');
+    };
 
-
-    setTimeout(() => {
-        let button = document.getElementById(`${datos.infoDeLoAprendido[i].h}`)
-
+    // Agregamos el evento a lo botones
+    let buttons = document.querySelectorAll('.frontal')
+    buttons.forEach((button, index) => {
         button.addEventListener("click", () => {
             inferior.classList.remove('arriba')
             inferior.classList.add('info')
             inferior.classList.remove('proyecto')
-            mostarInformcaionLoAprendido(i)
+            mostarInformacionLoAprendido(index)
             document.querySelector('.locosJBR .activo').classList.remove('activo')
             button.classList.toggle('activo')
-        })
-    }, 100);
+        });
+    });
+
+    // Mostramos la informacion correpondiente de cada boton
+    const mostarInformacionLoAprendido = (value) => {
+        if (value == 0) value = 0;
+        document.getElementById('informacion').innerHTML = '';
+        infoLoAprendidoHTML =
+            `<aside class="contentInf">
+                <div class="contentDivided">
+                    <h1>${datos.infoDeLoAprendido[value].h}</h1>
+                    <p>${datos.infoDeLoAprendido[value].p}</p>
+                    <div>
+                        <button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
+                        <button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
+                        <button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
+                    </div>
+                </div>
+                <div class="contentDivided">
+                    <h2>Ejemplos </h2>
+                    <div class="contentImg">
+                    <img src="${datos.infoDeLoAprendido[value].img}">
+                    <img src="${datos.infoDeLoAprendido[value].img}">
+                    <img src="${datos.infoDeLoAprendido[value].img}">
+                    <img src="${datos.infoDeLoAprendido[value].img}">
+                    </div>
+                </div>
+            </aside>`
+        document.getElementById('informacion').innerHTML += infoLoAprendidoHTML;
+    };
 };
 
-const mostarInformcaionLoAprendido = (value) => {
-    if (value == 0) value = 0;
-    document.getElementById('informacion').innerHTML = '';
-    infoLoAprendidoHTML =
-        `<aside class="contentInf">
-            <div class="contentDivided">
-                <h1>${datos.infoDeLoAprendido[value].h}</h1>
-                <p>${datos.infoDeLoAprendido[value].p}</p>
-                <div>
-                    <button><i class="${datos.infoDeContactos[value].i}"></i></button>
-                    <button><i class="${datos.infoDeContactos[value].i}"></i></button>
-                    <button><i class="${datos.infoDeContactos[value].i}"></i></button>
-                </div>
-            </div>
-            <div class="contentDivided">
-                <h2>Ejemplos </h2>
-                <div class="contentImg">
-                <img src="${datos.infoDeLoAprendido[value].img}">
-                <img src="${datos.infoDeLoAprendido[value].img}">
-                <img src="${datos.infoDeLoAprendido[value].img}">
-                <img src="${datos.infoDeLoAprendido[value].img}">
-                </div>
-            </div>
-        </aside>`
-    document.getElementById('informacion').innerHTML += infoLoAprendidoHTML;
-};
-
+createButtons()
 
 //////////////  Proyecto  //////////////  
 

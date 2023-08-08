@@ -7,16 +7,15 @@
 
 :root {
     --fondo: #e4e9f7;
-    --activo: #934174;
     --purpura: #9a76a7d3;
     --borde: #c5afc5;
-    --primary-color-light: #F6F5FF;
-    --proyectos: #DDD;
-    --base-morada: #34163f;
-    --text-color: #383536;
-    --color-2: #84a1bc;
-    --color-3: #4c4f85;
-    --color-4: #e4e9f7;
+
+
+    --activo: #EFE1D1;
+    --color-4: #FAF3F0;
+    --proyectos: #FFF;
+    --Fondo: #fae9e2;
+    --Letras: #342626;
 }
 
 body {
@@ -28,7 +27,7 @@ h2,
 h1,
 h3,
 p {
-    color: #fff;
+    color: var(--Letras);
 }
 
 img {
@@ -38,7 +37,7 @@ img {
 
 i {
     font-size: 2vw;
-    color: #34163f;
+    color: #331D2C;
     background-color: #d8b4a7;
     border-radius: 4px;
     padding: 3px;
@@ -48,14 +47,14 @@ button {
     cursor: pointer;
     background-color: var(--color-4);
     border-radius: 10px;
-    margin: 0px 4px 4px 0;
+    margin: 0.2rem;
     min-width: 4vw;
     height: 6vh;
     border: 1px solid var(--borde);
 }
 
 button:hover {
-    background-color: #d9dce6;
+    background-color: #EFE1D1;
 }
 
 video {
@@ -73,7 +72,7 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1vh 1vw 0;
+    padding: 1vh 2vw 0;
     transition: 0.5s;
 }
 
@@ -81,11 +80,9 @@ video {
     display: flex;
     justify-content: space-around;
     width: 22vw;
-    height: 9vh;
     padding: 1vw;
     margin-bottom: 1vw;
     background-color: var(--proyectos);
-    transition: 0.5s;
     border-radius: 10px;
     box-shadow: 0px 17px 15px 0px rgba(0, 0, 0, 0.54);
 }
@@ -101,7 +98,7 @@ video {
 
 .cajonDeIconos {
     height: 87%;
-    background-color: var(--primary-color-light);
+    background-color: var(--proyectos);
     transition: 0.5s;
     border-radius: 10px;
     box-shadow: 5px 4px 11px 0px rgba(0, 0, 0, 0.58);
@@ -109,11 +106,11 @@ video {
 
 .carpetaDeslizantes {
     display: flex;
-    justify-content: space-between;
-    background-color: #34163f;
+    justify-content: space-around;
+    background-color: var(--Fondo);
     border-radius: 10px;
-    margin: 1rem;
-    height: 94%;
+    margin: 0.7rem;
+    height: 97%;
     padding: 2rem;
 }
 
@@ -134,7 +131,7 @@ video {
 }
 
 body.arriba .sessionArriba {
-    height: 82vh;
+    height: 84vh;
 }
 
 /*////////////////////               seccionBajo                 ///////////////////
@@ -174,11 +171,11 @@ body.abajo .seccionBajo {
 .contentInf {
     display: flex;
     margin: 1rem;
-    padding: 1rem;
-    background-color: var(--base-morada);
+    padding: 2rem;
+    background-color: var(--Fondo);
     border-radius: 10px;
     height: 76vh;
-    width: 78vw;
+    width: 74vw;
 }
 
 
@@ -226,7 +223,7 @@ body.arriba .cajonDeInformacion {
 
 .cajasDeProyectos {
     background-color: var(--proyectos);
-    padding: 1vw;
+    padding: 1vh 2vw;
     transition: 0.5s;
     border-radius: 10px;
     box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
@@ -260,13 +257,13 @@ body.info .cajasDeProyectos h1 {
     display: grid;
     grid-template-columns: repeat(3, 28vw);
     gap: 0.6vw;
-    margin:  0.5vw 0;
+    margin: 0.5vw 0;
     border-radius: 10px;
 }
 
 .contenedores {
     padding: 5px;
-    background-color: #a773ba;
+    background-color: var(--purpura);
     height: 33vh;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
@@ -330,7 +327,7 @@ body.info .cajasDeProyectos h1 {
 
 .contenedores:hover img {
     filter: grayscale(70%) blur(1px);
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 /* modificar la clase */
