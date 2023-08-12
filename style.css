@@ -1,319 +1,320 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --fondo: #e4e9f7;
-    --purpura: #9a76a7d3;
-    --borde: #c5afc5;
+  --fondo: #e4e9f7;
+  --purpura: #9a76a7d3;
+  --borde: #c5afc5;
 
-
-    --activo: #EFE1D1;
-    --color-4: #FAF3F0;
-    --proyectos: #FFF;
-    --Fondo: #fae9e2;
-    --Letras: #342626;
+  --activo: #efe1d1;
+  --color-4: #faf3f0;
+  --proyectos: #fff;
+  --Fondo: #fae9e2;
+  --Letras: #342626;
 }
 
 body {
-    height: 100vh;
-    overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
 h2,
 h1,
 h3,
 p {
-    color: var(--Letras);
+  color: var(--Letras);
 }
 
 img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 i {
-    font-size: 2vw;
-    color: #331D2C;
-    background-color: #d8b4a7;
-    border-radius: 4px;
-    padding: 3px;
+  font-size: 2vw;
+  color: #331d2c;
+  background-color: #d8b4a7;
+  border-radius: 4px;
+  padding: 3px;
 }
 
 button {
-    cursor: pointer;
-    background-color: var(--color-4);
-    border-radius: 10px;
-    margin: 0.2rem;
-    min-width: 4vw;
-    height: 6vh;
-    border: 1px solid var(--borde);
+  cursor: pointer;
+  background-color: var(--color-4);
+  border-radius: 10px;
+  margin: 0.2rem;
+  min-width: 4vw;
+  height: 6vh;
+  border: 1px solid var(--borde);
 }
 
 button:hover {
-    background-color: #EFE1D1;
+  background-color: #efe1d1;
 }
 
 video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /*////////////////////       sessionArriba     ///////////////////
 ///////////////////////////////////////////////////////////////// */
 
 .sessionArriba {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1vh 2vw 0;
-    transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 2vw 0;
+  transition: 0.5s;
 }
 
 .iconosDeMenu {
-    display: flex;
-    justify-content: space-around;
-    width: 22vw;
-    padding: 1vw;
-    margin-bottom: 1vw;
-    background-color: var(--proyectos);
-    border-radius: 10px;
-    box-shadow: 0px 17px 15px 0px rgba(0, 0, 0, 0.54);
+  display: flex;
+  justify-content: space-around;
+  width: 22vw;
+  padding: 1vw;
+  margin-bottom: 1vw;
+  background-color: var(--proyectos);
+  border-radius: 10px;
+  box-shadow: 0px 17px 15px 0px rgba(0, 0, 0, 0.54);
 }
 
 .sessionArriba .perfil {
-    position: absolute;
-    height: 9vh;
-    width: 6vw;
-    border-radius: 50%;
-    left: 2rem;
-    top: 1rem;
+  position: absolute;
+  height: 9vh;
+  width: 6vw;
+  border-radius: 50%;
+  left: 2rem;
+  top: 1rem;
 }
 
 .cajonDeIconos {
-    height: 87%;
-    background-color: var(--proyectos);
-    transition: 0.5s;
-    border-radius: 10px;
-    box-shadow: 5px 4px 11px 0px rgba(0, 0, 0, 0.58);
+  height: 87%;
+  background-color: var(--proyectos);
+  transition: 0.5s;
+  border-radius: 10px;
+  box-shadow: 5px 4px 11px 0px rgba(0, 0, 0, 0.58);
 }
 
 .carpetaDeslizantes {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--Fondo);
-    border-radius: 10px;
-    margin: 0.7rem;
-    height: 97%;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--Fondo);
+  border-radius: 10px;
+  margin: 0.7rem;
+  height: 97%;
+  padding: 2rem;
 }
 
 .contentDivided {
-    width: 48%;
+  width: 50%;
 }
 
 .carpetaDeslizantes h1,
 .contentInf h1 {
-    font-size: 4vw;
-    margin-bottom: 3vw;
+  font-size: 4vw;
+  margin-bottom: 3vw;
 }
 
 .carpetaDeslizantes p,
 .info p {
-    margin-bottom: 5vw;
-    font-size: 2vw;
+  margin-bottom: 5vw;
+  font-size: 2vw;
 }
 
 body.arriba .sessionArriba {
-    height: 84vh;
+  height: 84vh;
 }
 
-/*////////////////////               seccionBajo                 ///////////////////
+/*/ ///////////////////               seccionBajo                 ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
 
 .seccionBajo {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 1vh 1vw;
-    ;
-    transition: 0.5s;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh 1vw;
+  transition: 0.5s;
 }
 
 body.abajo .seccionBajo {
-    height: 60%;
+  height: 60%;
 }
 
 /*////////////////////              informacion                   ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
 
 .locosJBR {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 1rem;
-    background-color: var(--proyectos);
-    border-radius: 10px;
-    box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: var(--proyectos);
+  border-radius: 10px;
+  box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
 }
 
 .cajonDeInformacion {
-    background-color: var(--proyectos);
-    border-radius: 10px;
+  background-color: var(--proyectos);
+  border-radius: 10px;
 }
 
 .contentInf {
-    display: flex;
-    margin: 1rem;
-    padding: 2rem;
-    background-color: var(--Fondo);
-    border-radius: 10px;
-    height: 76vh;
-    width: 74vw;
+  display: flex;
+  margin: 1rem;
+  padding: 2rem;
+  background-color: var(--Fondo);
+  border-radius: 10px;
+  height: 76vh;
+  width: 74vw;
 }
-
 
 .contentImg {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.contentDivided div {
-    text-align: center;
+.contProyec {
+  width: 17vw;
+  height: 16vh;
+  margin-bottom: 0.5rem;
 }
+
+/* .contentDivided div  {
+    text-align: center;
+} */
 
 .contentDivided:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
 .info .locosJBR .activo {
-    height: 60%;
-    transition: 0.5s;
+  height: 60%;
+  transition: 0.5s;
 }
 
 /* modificar la clase */
 body.arriba .locosJBR {
-    flex-direction: row;
-    background: transparent;
+  flex-direction: row;
+  background: transparent;
 }
 
 body.info .locosJBR {
-    height: 50vh;
+  height: 50vh;
 }
 
 body.proyecto .cajonDeInformacion,
 body.arriba .cajonDeInformacion {
-    width: 2vw;
-    height: 0;
+  width: 2vw;
+  height: 0;
 }
 
 /*////////////////////               cajasDeProyectos                ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////*/
 
-
 .cajasDeProyectos {
-    background-color: var(--proyectos);
-    padding: 1vh 2vw;
-    transition: 0.5s;
-    border-radius: 10px;
-    box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
+  background-color: var(--proyectos);
+  padding: 1vh 2vw;
+  transition: 0.5s;
+  border-radius: 10px;
+  box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
 }
 
 .cajasDeProyectos h1 {
-    font-size: 2vw;
+  font-size: 2vw;
 }
 
 .numerosDePaginas {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 body.info .numerosDePaginas {
-    flex-direction: column;
-    width: 5vw;
+  flex-direction: column;
+  width: 5vw;
 }
 
 body.info .cajasDeProyectos h1 {
-    font-size: 1vw;
+  font-size: 1vw;
 }
 
 .menuIteam.activo,
 .numerosDePaginas .indicador.activo,
 .frontal.activo {
-    background-color: var(--activo);
+  background-color: var(--activo);
 }
 
 .proyectos {
-    display: grid;
-    grid-template-columns: repeat(3, 28vw);
-    gap: 0.6vw;
-    margin: 0.5vw 0;
-    border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 28vw);
+  gap: 0.6vw;
+  margin: 0.5vw 0;
+  border-radius: 10px;
 }
 
 .contenedores {
-    padding: 5px;
-    background-color: var(--purpura);
-    height: 33vh;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
-    overflow: hidden;
+  padding: 5px;
+  background-color: var(--purpura);
+  height: 33vh;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
+  overflow: hidden;
 }
 
 .contenedores img {
-    border-radius: 10px;
-    transition: opacity 1s, transform 1s;
+  border-radius: 10px;
+  transition: opacity 1s, transform 1s;
 }
 
 .proyectos-informacion {
-    position: relative;
-    top: -257px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    font-size: 1em;
-    overflow: hidden;
-    cursor: pointer;
+  position: relative;
+  top: -257px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  font-size: 1em;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .contenedores h2,
 .contenedores p,
 .contenedores i {
-    transition: opacity 1s, transform 1s;
-    background: rgba(255, 255, 255, 0.8);
-    color: #2f3238;
-    margin-bottom: 22px;
+  transition: opacity 1s, transform 1s;
+  background: rgba(255, 255, 255, 0.8);
+  color: #2f3238;
+  margin-bottom: 22px;
 }
 
 .contenedores h2,
 .contenedores p {
-    transition-delay: 0.10s;
-    padding: 0.5em 0.5em;
-    transform: translateX(-120%);
-    border-radius: 5px;
+  transition-delay: 0.1s;
+  padding: 0.5em 0.5em;
+  transform: translateX(-120%);
+  border-radius: 5px;
 }
 
 .contenedores i {
-    transition-delay: 0.20s;
-    margin-left: 40%;
-    opacity: 0;
-    margin-bottom: 10px;
+  transition-delay: 0.2s;
+  margin-left: 40%;
+  opacity: 0;
+  margin-bottom: 10px;
 }
 
 .contenedores p {
-    font-weight: 500;
-    transition-delay: 0.30s;
+  font-weight: 500;
+  transition-delay: 0.3s;
 }
 
 /* modificar con hover */
@@ -321,13 +322,13 @@ body.info .cajasDeProyectos h1 {
 .contenedores:hover h2,
 .contenedores:hover p,
 .contenedores:hover i {
-    transform: translateX(0);
-    opacity: 1;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .contenedores:hover img {
-    filter: grayscale(70%) blur(1px);
-    transform: scale(1.3);
+  filter: grayscale(70%) blur(1px);
+  transform: scale(1.3);
 }
 
 /* modificar la clase */
@@ -337,7 +338,7 @@ body.info .cajasDeProyectos,
 body.proyecto .locosJBR,
 body.info .iconosDeMenu,
 body.proyecto .iconosDeMenu {
-    background: transparent;
+  background: transparent;
 }
 
 body.info .proyectos,
@@ -346,5 +347,5 @@ body.proyecto .contentInf,
 body.arriba .contentInf,
 body.info .carpetaDeslizantes,
 body.proyecto .carpetaDeslizantes {
-    display: none;
+  display: none;
 }
