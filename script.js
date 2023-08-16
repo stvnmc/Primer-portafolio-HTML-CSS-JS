@@ -3,77 +3,54 @@ const datos = {
     {
       i: "fa-brands fa-linkedin",
       h2: "Linkedin",
-      p: `Como desarrollador autodidacta desde mis comienzos siempre estuve aplicando lo que aprendía haciendo proyectos que destacaran los conocimientos
-            adquiridos, estudiando las mejores prácticas, entendiendo cómo funciona la programación y la mejor forma de emplear su uso.`,
+      p: `Fortalezco mi perfil profesional, exhibiendo proyectos web y conexiones clave para oportunidades de crecimiento y colaboración.`,
       img: "img/Git.png",
     },
     {
       i: "fa-brands fa-instagram",
       h2: "Instagram",
-      p: `Empleo Instagram para compartir imágenes y videos de mis proyectos web, brindando una visión visual de mis habilidades. Esta plataforma me permite 
-            presentar de manera atractiva mi trabajo a reclutadores y seguidores, destacando mis logros en el desarrollo.`,
+      p: `Comparto mi pasión creativa. A través de imágenes y videos, exhibo proyectos web, inspirando y conectando con audiencias.`,
       img: "img/Instagram.png",
     },
     {
       i: "fa-brands fa-github",
       h2: "Git",
-      p: `Logré buenos hábitos y prácticas de código aplicables a cualquier trabajo como desarrollador, logré crear distintos proyectos y aprender sobre 
-            distintas tecnologías y frameworks como: HTML, CSS, JavaScript, React, Git, entre otros mas.`,
+      p: `Control preciso de versiones. Git asegura la integridad y colaboración fluida, mejorando la calidad de mis proyectos web.`,
       img: "img/Git.png",
     },
     {
       i: "fa-brands fa-youtube",
       h2: "Youtube",
-      p: `Utilizo YouTube como plataforma para compartir videos detallados de mis proyectos de codificación. Esto permite a otros ver de manera visual y comprensible
-            cómo abordo diferentes desafíos y desarrollo soluciones.`,
+      p: `Transmito conocimientos y procesos. Mediante videos, comparto mis proyectos web globalmente, estimulando aprendizaje y visibilidad.`,
       img: "img/Instagram.png",
     },
   ],
   infoDeLoAprendido: [
     {
       i: "fa-brands fa-html5",
-      h: "HTML & CSS",
-      p: `Opto por HTML y CSS para construir mis proyectos web debido a su versatilidad y poder creativo.
-            Estos lenguajes me permiten dar vida a mis ideas con estructura y estilo, creando experiencias 
-            cautivadoras y funcionales que reflejan mis habilidades de desarrollo.`,
-      img: "img/One piece, Yamato.jpg",
+      h: "HTML",
+      p: `Con HTML, estructuro sólidas bases para mis proyectos, dando forma a la información esencial y navegación fluida.`,
+    },
+    {
+      i: "fa-brands fa-css3-alt",
+      h: "CSS",
+      p: `CSS da vida a mis diseños, creando atractivas interfaces y estilos consistentes para experiencias visuales impactantes.`,
     },
     {
       i: "fa-brands fa-square-js",
       h: "JavaScript",
-      p: `Integro JavaScript en mis proyectos web para potenciar la interactividad y la dinámica. 
-            Con este lenguaje, transformo conceptos en funciones y características envolventes, 
-            proporcionando experiencias web fluidas y enriquecedoras que demuestran mi compromiso con la excelencia en el desarrollo.`,
-      img: "img/One piece, Falco.jpg",
-    },
-    {
-      i: "fa-brands fa-react",
-      h: "React",
-      p: `Abrazo React en mis proyectos web por su enfoque en componentes reutilizables y eficiencia. A través de esta biblioteca,
-            construyo interfaces dinámicas y de alto rendimiento que reflejan mi dedicación a proporcionar experiencias digitales 
-            modernas y cautivadoras en mis desarrollos.`,
-      img: "img/One piece,Kiado.jpg",
-    },
-    {
-      i: "fa-solid fa-code",
-      h: "TypeScript",
-      p: `Empleo TypeScript en mis proyectos web para elevar la calidad de mi código. Con su tipado estático y herramientas
-            de desarrollo robustas, construyo aplicaciones más seguras y mantenibles. Mi compromiso con la excelencia técnica 
-            se refleja en cada implementación respaldada por TypeScript.`,
-      img: "img/One piece, Falco.jpg",
+      p: ` Utilizo JavaScript para interactividad dinámica, transformando estáticos sitios en aplicaciones web potentes y envolventes.`,
     },
     {
       i: "fa-brands fa-bootstrap",
       h: "Bootstrap",
-      p: `Bootstrap en mis proyectos web para agilizar el diseño responsivo y la estética. Sus componentes
-            predefinidos me permiten crear interfaces pulidas y adaptables, demostrando mi capacidad para entregar 
-            experiencias visuales y funcionales de alta calidad.`,
-      img: "img/One piece, Falco.jpg",
+      p: `Con Bootstrap, desarrollo ágilmente interfaces responsivas y modernas, agilizando el diseño y optimizando la experiencia del usuario.`,
     },
   ],
   infoProyectos: [
     {
       nombre: "PokeApi",
+      type: "html, css, javaScript",
       img: "img/PokeApi.jpg",
       href: "https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2",
       AboutP:
@@ -216,7 +193,9 @@ const mostarInformcaionContacto = (value) => {
                     </div>
                 </div>
                 <div  class="contentDivided">
+                  <figure class="contentContacto">
                     <img src="${datos.infoDeContactos[value].img}" alt="${datos.infoDeContactos[value].h2}">
+                  </figure>
                 </div>
             </section>
         `;
@@ -269,25 +248,29 @@ function createButtons() {
                         <button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
                     </div>
                 </div>
-                <div class="contentDivided">
-                    <h2>Ejemplos </h2>
-                    <div class="contentImg">
-                        <div class="contProyec">
-                            <img src="${datos.infoDeLoAprendido[value].img}">
-                        </div>
-                        <div class="contProyec">
-                            <img src="${datos.infoDeLoAprendido[value].img}">
-                        </div>
-                        <div class="contProyec">
-                            <img src="${datos.infoDeLoAprendido[value].img}">
-                        </div>
-                        <div class="contProyec">
-                            <img src="${datos.infoDeLoAprendido[value].img}">
-                        </div>
-                    </div>
-                </div>
+                  <div class="contentDivided" id="ProyectosEspesificados">
+                  </div>
             </aside>`;
     document.getElementById("informacion").innerHTML += infoLoAprendidoHTML;
+    imgProyectos(value);
+  };
+
+  const imgProyectos = (value) => {
+    console.log(value);
+
+    imgProyecto = `
+    <figure class="contenedoresInfo">
+      <div class="contProyec")">
+        <img src="${datos.infoProyectos[0].img}"/>
+      </div>
+    </figure>
+    <figure class="contenedoresInfo">
+      <div class="contProyec">
+        <img src="${datos.infoProyectos[0].img}"/>
+      </div>
+    </figure>
+    `;
+    document.getElementById("ProyectosEspesificados").innerHTML += imgProyecto;
   };
 }
 

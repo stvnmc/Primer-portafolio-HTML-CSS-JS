@@ -114,18 +114,18 @@ video {
 }
 
 .contentDivided {
-  width: 50%;
+  width: 43%;
 }
 
 .carpetaDeslizantes h1,
 .contentInf h1 {
   font-size: 4vw;
-  margin-bottom: 3vw;
+  margin-bottom: 9vh;
 }
 
 .carpetaDeslizantes p,
 .info p {
-  margin-bottom: 5vw;
+  margin-bottom: 13vh;
   font-size: 2vw;
 }
 
@@ -155,7 +155,7 @@ body.abajo .seccionBajo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 1rem;
+  padding: 1vw;
   background-color: var(--proyectos);
   border-radius: 10px;
   box-shadow: 5px 16px 21px -3px rgba(0, 0, 0, 0.58);
@@ -169,23 +169,19 @@ body.abajo .seccionBajo {
 .contentInf {
   display: flex;
   margin: 1rem;
-  padding: 2rem;
   background-color: var(--Fondo);
   border-radius: 10px;
   height: 76vh;
   width: 74vw;
 }
 
-.contentImg {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
+
 
 .contProyec {
-  width: 17vw;
-  height: 16vh;
-  margin-bottom: 0.5rem;
+  background-size: cover;
+  width: 34vw;
+  height: 31vh;
+
 }
 
 /* .contentDivided div  {
@@ -195,8 +191,18 @@ body.abajo .seccionBajo {
 .contentDivided:first-child {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 1.5rem;
 }
+
+.contentDivided:nth-child(2){
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
 
 .info .locosJBR .activo {
   height: 60%;
@@ -262,7 +268,8 @@ body.info .cajasDeProyectos h1 {
   border-radius: 10px;
 }
 
-.contenedores {
+.contenedores,
+.contenedoresInfo {
   padding: 5px;
   background-color: var(--purpura);
   height: 33vh;
@@ -270,8 +277,17 @@ body.info .cajasDeProyectos h1 {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
   overflow: hidden;
 }
+.contentContacto{
+  padding: 5px;
+  background-color: var(--purpura);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px;
+}
 
-.contenedores img {
+.contenedores img,
+.contProyec img ,
+.contentContacto img{
   border-radius: 10px;
   transition: opacity 1s, transform 1s;
 }
@@ -326,7 +342,9 @@ body.info .cajasDeProyectos h1 {
   opacity: 1;
 }
 
-.contenedores:hover img {
+.contenedores:hover img,
+.contenedoresInfo:hover img,
+.contentContacto:hover img {
   filter: grayscale(70%) blur(1px);
   transform: scale(1.3);
 }
