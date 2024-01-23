@@ -201,6 +201,8 @@ body.abajo .seccionBajo {
   align-items: center;
   justify-content: space-evenly;
 }
+ .contentDivided > div{   display: flex;
+    align-items: center;}
 
 
 

@@ -52,96 +52,33 @@ const datos = {
       nombre: "PokeApi",
       type: "html, css, javaScript",
       img: "img/PokeApi.jpg",
-      href: "https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2",
+      href: "https://stvnmc.github.io/Poke-Api/",
       AboutP:
         "Una PokeApi mas completa con sus con la informacion del pokemon y su generaciones",
     },
     {
-      nombre: "2dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
+      nombre: "CalculadoraJS",
+      img: "img/CalculadoraJS.jpg",
+      href: "https://stvnmc.github.io/CalculadoraConColor/",
+      AboutP: "CalculadoraJS",
     },
     {
-      nombre: " 3 omoesas",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
+      nombre: "Netflix-Carrucel",
+      img: "img/NexflixClon.jpg",
+      href: "https://stvnmc.github.io/Netflix-Carrucel/",
+      AboutP: "Netflix-Carrucel",
     },
     {
-      nombre: "4 dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
+      nombre: "Login-Pages",
+      img: "img/Login-Pages.jpg",
+      href: "https://stvnmc.github.io/Login-Pages/",
+      AboutP: "Login-Pages",
     },
     {
-      nombre: "5 dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "6 dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: " 7 PokeApi",
-      img: "img/PokeApi.jpg",
-      href: "https://github.com/stvnmc/Mini-Proyectos_JS/tree/main/PokeApi2",
-      AboutP:
-        "Una PokeApi mas completa con sus con la informacion del pokemon y su generaciones",
-    },
-    {
-      nombre: " 8 2dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: " 9 comoesas",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "10 4dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "11 5dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "12 6dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "13 7dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "14 8dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "15 8dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "16 8dsd",
-      img: "img/b lurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "17 8dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
-    },
-    {
-      nombre: "18 5dsd",
-      img: "img/blurry loading.png",
-      AboutP: "XBOX and PLAYS",
+      nombre: "Nike-Store",
+      img: "img/Nike-Store.jpg",
+      href: "https://stvnmc.github.io/Nike-Store/",
+      AboutP: "Nike-Store",
     },
   ],
 };
@@ -188,9 +125,6 @@ const mostarInformcaionContacto = (value) => {
                 <div class="contentDivided">
                     <h1>${datos.infoDeContactos[value].h2}</h1>
                     <p>${datos.infoDeContactos[value].p}</p>
-                    <div>
-                        <button><i class="${datos.infoDeContactos[value].i}"></i></button>
-                    </div>
                 </div>
                 <div  class="contentDivided">
                   <figure class="contentContacto">
@@ -243,21 +177,15 @@ function createButtons() {
                     <h1>${datos.infoDeLoAprendido[value].h}</h1>
                     <p>${datos.infoDeLoAprendido[value].p}</p>
                     <div>
-                        <button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
-                        <button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
-                        <button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
+                    <h2>Documentacion: </h2><button><i class="${datos.infoDeLoAprendido[value].i}"></i></button>
                     </div>
                 </div>
                   <div class="contentDivided" id="ProyectosEspesificados">
                   </div>
             </aside>`;
     document.getElementById("informacion").innerHTML += infoLoAprendidoHTML;
-    imgProyectos(value);
-  };
 
-  const imgProyectos = (value) => {
-    console.log(value);
-
+    // Creamos los 2 proyectos de ejemplo
     imgProyecto = `
     <figure class="contenedoresInfo">
       <div class="contProyec")">
